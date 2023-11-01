@@ -1,66 +1,49 @@
 package org.hazelcast;
 
-import com.hazelcast.config.Config;
 import com.hazelcast.core.*;
 import com.hazelcast.cp.IAtomicLong;
 import com.hazelcast.map.IMap;
-import com.hazelcast.map.EntryProcessor;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-import java.util.Map;
 
 public class HazelcastCounter {
     HazelcastInstance hazelcastInstance;
-    IMap<String, Integer> counterMap;
+    IMap<String, VersionedValue> counterMap;
 
-    public HazelcastCounter() {
-        Config config = new Config();
-        config.setProperty("hazelcast.logging.type", "slf4j");
-        hazelcastInstance = Hazelcast.newHazelcastInstance(config);
+    public HazelcastCounter(HazelcastInstance hazelcastInstance) {
+        this.hazelcastInstance = hazelcastInstance;
         counterMap = hazelcastInstance.getMap("counterMap");
     }
 
     public void resetCounter() {
-        counterMap.put("counter", 0);
+        counterMap.put("counter", new VersionedValue(0, 0));
         IAtomicLong atomicLong = hazelcastInstance.getCPSubsystem().getAtomicLong("atomicCounter");
         atomicLong.set(0);
     }
 
     public void incrementWithoutLocks() {
-        int currentValue = counterMap.getOrDefault("counter", 0);
-        counterMap.put("counter", currentValue + 1);
+        VersionedValue currentValue = counterMap.getOrDefault("counter", new VersionedValue(0, 0));
+        counterMap.put("counter", new VersionedValue(currentValue.value + 1, currentValue.version + 1));
     }
 
     public void incrementWithPessimisticLocking() {
         counterMap.lock("counter");
         try {
-            int currentValue = counterMap.getOrDefault("counter", 0);
-            counterMap.put("counter", currentValue + 1);
+            VersionedValue currentValue = counterMap.getOrDefault("counter", new VersionedValue(0, 0));
+            counterMap.put("counter", new VersionedValue(currentValue.value + 1, currentValue.version + 1));
         } finally {
             counterMap.unlock("counter");
         }
     }
 
     public void incrementWithOptimisticLocking() {
-        counterMap.executeOnKey("counter", new IncrementProcessor());
-    }
-
-    public static class IncrementProcessor implements EntryProcessor<String, Integer, Void> {
-        @Override
-        public Void process(Map.Entry<String, Integer> entry) {
-            Integer value = entry.getValue();
-            if (value == null) {
-                value = 0;
-            }
-            entry.setValue(value + 1);
-            return null;
-        }
-
-        @Override
-        public EntryProcessor<String, Integer, Void> getBackupProcessor() {
-            return null;
+        boolean updated = false;
+        while (!updated) {
+            VersionedValue originalValue = counterMap.get("counter");
+            VersionedValue newValue = new VersionedValue(originalValue.value + 1, originalValue.version + 1);
+            updated = counterMap.replace("counter", originalValue, newValue);
         }
     }
 
@@ -91,5 +74,20 @@ public class HazelcastCounter {
 
         long endTime = System.currentTimeMillis();
         System.out.println("Time taken: " + (endTime - startTime) + " ms");
+    }
+
+    public static class VersionedValue {
+        public int value;
+        public int version;
+
+        public VersionedValue(int value, int version) {
+            this.value = value;
+            this.version = version;
+        }
+
+        @Override
+        public String toString() {
+            return "" + value;
+        }
     }
 }

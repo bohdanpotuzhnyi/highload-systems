@@ -1,84 +1,358 @@
-2023-09-13 14:27:45 WARN  AddressPicker:67 - [LOCAL] [dev] [5.3.2] Ignoring TCP_KEEPCOUNT. It seems your JDK does not support jdk.net.ExtendedSocketOptions on this OS. Try upgrading to the latest JDK or check with your JDK vendor.Alternatively, on Linux, configure tcp_keepalive_probes in the kernel (affecting default keep-alive configuration for all sockets): For more info see https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/. If this isn't dealt with, idle connections could be closed prematurely.
-2023-09-13 14:27:45 WARN  AddressPicker:67 - [LOCAL] [dev] [5.3.2] Ignoring TCP_KEEPIDLE. It seems your JDK does not support jdk.net.ExtendedSocketOptions on this OS. Try upgrading to the latest JDK or check with your JDK vendor.Alternatively, on Linux, configure tcp_keepalive_time in the kernel (affecting default keep-alive configuration for all sockets): For more info see https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/. If this isn't dealt with, idle connections could be closed prematurely.
-2023-09-13 14:27:45 WARN  AddressPicker:67 - [LOCAL] [dev] [5.3.2] Ignoring TCP_KEEPINTERVAL. It seems your JDK does not support jdk.net.ExtendedSocketOptions on this OS. Try upgrading to the latest JDK or check with your JDK vendor.Alternatively, on Linux, configure tcp_keepalive_intvl in the kernel (affecting default keep-alive configuration for all sockets): For more info see https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/. If this isn't dealt with, idle connections could be closed prematurely.
-2023-09-13 14:27:45 INFO  logo:65 - [192.168.119.49]:5701 [dev] [5.3.2] 
+2023-11-01 21:47:44 WARN  HazelcastInstanceFactory:50 - Hazelcast is starting in a Java modular environment (Java 9 and newer) but without proper access to required Java packages. Use additional Java arguments to provide Hazelcast access to Java internal API. The internal API access is used to get the best performance results. Arguments to be used:
+ --add-modules java.se --add-exports java.base/jdk.internal.ref=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens java.management/sun.management=ALL-UNNAMED --add-opens jdk.management/com.sun.management.internal=ALL-UNNAMED
+2023-11-01 21:47:45 WARN  AddressPicker:67 - [LOCAL] [dev] [5.3.2] Ignoring TCP_KEEPCOUNT. It seems your JDK does not support jdk.net.ExtendedSocketOptions on this OS. Try upgrading to the latest JDK or check with your JDK vendor.Alternatively, on Linux, configure tcp_keepalive_probes in the kernel (affecting default keep-alive configuration for all sockets): For more info see https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/. If this isn't dealt with, idle connections could be closed prematurely.
+2023-11-01 21:47:45 WARN  AddressPicker:67 - [LOCAL] [dev] [5.3.2] Ignoring TCP_KEEPIDLE. It seems your JDK does not support jdk.net.ExtendedSocketOptions on this OS. Try upgrading to the latest JDK or check with your JDK vendor.Alternatively, on Linux, configure tcp_keepalive_time in the kernel (affecting default keep-alive configuration for all sockets): For more info see https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/. If this isn't dealt with, idle connections could be closed prematurely.
+2023-11-01 21:47:45 WARN  AddressPicker:67 - [LOCAL] [dev] [5.3.2] Ignoring TCP_KEEPINTERVAL. It seems your JDK does not support jdk.net.ExtendedSocketOptions on this OS. Try upgrading to the latest JDK or check with your JDK vendor.Alternatively, on Linux, configure tcp_keepalive_intvl in the kernel (affecting default keep-alive configuration for all sockets): For more info see https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/. If this isn't dealt with, idle connections could be closed prematurely.
+2023-11-01 21:47:45 INFO  logo:65 - [192.168.0.33]:5701 [dev] [5.3.2] 
 	+       +  o    o     o     o---o o----o o      o---o     o     o----o o--o--o
 	+ +   + +  |    |    / \       /  |      |     /         / \    |         |   
 	+ + + + +  o----o   o   o     o   o----o |    o         o   o   o----o    |   
 	+ +   + +  |    |  /     \   /    |      |     \       /     \       |    |   
 	+       +  o    o o       o o---o o----o o----o o---o o       o o----o    o   
-2023-09-13 14:27:45 INFO  system:65 - [192.168.119.49]:5701 [dev] [5.3.2] Copyright (c) 2008-2023, Hazelcast, Inc. All Rights Reserved.
-2023-09-13 14:27:45 INFO  system:65 - [192.168.119.49]:5701 [dev] [5.3.2] Hazelcast Platform 5.3.2 (20230821 - b6cb479) starting at [192.168.119.49]:5701
-2023-09-13 14:27:45 INFO  system:65 - [192.168.119.49]:5701 [dev] [5.3.2] Cluster name: dev
-2023-09-13 14:27:45 INFO  system:65 - [192.168.119.49]:5701 [dev] [5.3.2] Integrity Checker is disabled. Fail-fast on corrupted executables will not be performed. For more information, see the documentation for Integrity Checker.
-2023-09-13 14:27:45 INFO  system:65 - [192.168.119.49]:5701 [dev] [5.3.2] The Jet engine is disabled.
+2023-11-01 21:47:45 INFO  system:65 - [192.168.0.33]:5701 [dev] [5.3.2] Copyright (c) 2008-2023, Hazelcast, Inc. All Rights Reserved.
+2023-11-01 21:47:45 INFO  system:65 - [192.168.0.33]:5701 [dev] [5.3.2] Hazelcast Platform 5.3.2 (20230821 - b6cb479) starting at [192.168.0.33]:5701
+2023-11-01 21:47:45 INFO  system:65 - [192.168.0.33]:5701 [dev] [5.3.2] Cluster name: dev
+2023-11-01 21:47:45 INFO  system:65 - [192.168.0.33]:5701 [dev] [5.3.2] Integrity Checker is disabled. Fail-fast on corrupted executables will not be performed. For more information, see the documentation for Integrity Checker.
+2023-11-01 21:47:45 INFO  system:65 - [192.168.0.33]:5701 [dev] [5.3.2] The Jet engine is disabled.
 To enable the Jet engine on the members, do one of the following:
   - Change member config using Java API: config.getJetConfig().setEnabled(true)
   - Change XML/YAML configuration property: Set hazelcast.jet.enabled to true
   - Add system property: -Dhz.jet.enabled=true (for Hazelcast embedded, works only when loading config via Config.load)
   - Add environment variable: HZ_JET_ENABLED=true (recommended when running container image. For Hazelcast embedded, works only when loading config via Config.load)
-2023-09-13 14:27:46 INFO  TpcServerBootstrap:65 - [192.168.119.49]:5701 [dev] [5.3.2] TPC: disabled
-2023-09-13 14:27:48 INFO  security:65 - [192.168.119.49]:5701 [dev] [5.3.2] Enable DEBUG/FINE log level for log category com.hazelcast.system.security  or use -Dhazelcast.security.recommendations system property to see security recommendations and the status of current config.
-2023-09-13 14:27:48 INFO  Node:65 - [192.168.119.49]:5701 [dev] [5.3.2] Using Multicast discovery
-2023-09-13 14:27:48 WARN  CPSubsystem:67 - [192.168.119.49]:5701 [dev] [5.3.2] CP Subsystem is not enabled. CP data structures will operate in UNSAFE mode! Please note that UNSAFE mode will not provide strong consistency guarantees.
-2023-09-13 14:27:49 INFO  Diagnostics:65 - [192.168.119.49]:5701 [dev] [5.3.2] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
-2023-09-13 14:27:49 INFO  LifecycleService:65 - [192.168.119.49]:5701 [dev] [5.3.2] [192.168.119.49]:5701 is STARTING
-2023-09-13 14:27:52 INFO  ClusterService:65 - [192.168.119.49]:5701 [dev] [5.3.2] 
+2023-11-01 21:47:46 INFO  TpcServerBootstrap:65 - [192.168.0.33]:5701 [dev] [5.3.2] TPC: disabled
+2023-11-01 21:47:47 INFO  security:65 - [192.168.0.33]:5701 [dev] [5.3.2] Enable DEBUG/FINE log level for log category com.hazelcast.system.security  or use -Dhazelcast.security.recommendations system property to see security recommendations and the status of current config.
+2023-11-01 21:47:47 INFO  Node:65 - [192.168.0.33]:5701 [dev] [5.3.2] Using Multicast discovery
+2023-11-01 21:47:47 INFO  CPSubsystem:65 - [192.168.0.33]:5701 [dev] [5.3.2] CP Subsystem is enabled with 3 members.
+2023-11-01 21:47:48 INFO  Diagnostics:65 - [192.168.0.33]:5701 [dev] [5.3.2] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+2023-11-01 21:47:48 INFO  LifecycleService:65 - [192.168.0.33]:5701 [dev] [5.3.2] [192.168.0.33]:5701 is STARTING
+2023-11-01 21:47:51 INFO  ClusterService:65 - [192.168.0.33]:5701 [dev] [5.3.2] 
 
 Members {size:1, ver:1} [
-	Member [192.168.119.49]:5701 - d3e6891e-0dbf-4ca2-87fa-0479cba3abcd this
+	Member [192.168.0.33]:5701 - 5a1db959-02ce-4321-b4f2-93b2c5dd2429 this
 ]
 
-2023-09-13 14:27:53 INFO  LifecycleService:65 - [192.168.119.49]:5701 [dev] [5.3.2] [192.168.119.49]:5701 is STARTED
-2023-09-13 14:27:53 INFO  PartitionStateManager:65 - [192.168.119.49]:5701 [dev] [5.3.2] Initializing cluster partition table arrangement...
-2023-09-13 14:28:27 INFO  Node:65 - [192.168.119.49]:5701 [dev] [5.3.2] Running shutdown hook... Current node state: ACTIVE
-2023-09-13 14:28:27 INFO  LifecycleService:65 - [192.168.119.49]:5701 [dev] [5.3.2] [192.168.119.49]:5701 is SHUTTING_DOWN
-2023-09-13 14:28:27 WARN  Node:67 - [192.168.119.49]:5701 [dev] [5.3.2] Terminating forcefully...
-2023-09-13 14:28:27 INFO  Node:65 - [192.168.119.49]:5701 [dev] [5.3.2] Shutting down multicast service...
-2023-09-13 14:28:27 INFO  Node:65 - [192.168.119.49]:5701 [dev] [5.3.2] Shutting down connection manager...
-2023-09-13 14:28:27 INFO  Node:65 - [192.168.119.49]:5701 [dev] [5.3.2] Shutting down node engine...
-2023-09-13 14:28:27 INFO  NodeExtension:65 - [192.168.119.49]:5701 [dev] [5.3.2] Destroying node NodeExtension.
-2023-09-13 14:28:27 INFO  Node:65 - [192.168.119.49]:5701 [dev] [5.3.2] Hazelcast Shutdown is completed in 43 ms.
-2023-09-13 14:28:27 INFO  LifecycleService:65 - [192.168.119.49]:5701 [dev] [5.3.2] [192.168.119.49]:5701 is SHUTDOWN
-2023-09-13 14:28:40 WARN  AddressPicker:67 - [LOCAL] [dev] [5.3.2] Ignoring TCP_KEEPCOUNT. It seems your JDK does not support jdk.net.ExtendedSocketOptions on this OS. Try upgrading to the latest JDK or check with your JDK vendor.Alternatively, on Linux, configure tcp_keepalive_probes in the kernel (affecting default keep-alive configuration for all sockets): For more info see https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/. If this isn't dealt with, idle connections could be closed prematurely.
-2023-09-13 14:28:40 WARN  AddressPicker:67 - [LOCAL] [dev] [5.3.2] Ignoring TCP_KEEPIDLE. It seems your JDK does not support jdk.net.ExtendedSocketOptions on this OS. Try upgrading to the latest JDK or check with your JDK vendor.Alternatively, on Linux, configure tcp_keepalive_time in the kernel (affecting default keep-alive configuration for all sockets): For more info see https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/. If this isn't dealt with, idle connections could be closed prematurely.
-2023-09-13 14:28:40 WARN  AddressPicker:67 - [LOCAL] [dev] [5.3.2] Ignoring TCP_KEEPINTERVAL. It seems your JDK does not support jdk.net.ExtendedSocketOptions on this OS. Try upgrading to the latest JDK or check with your JDK vendor.Alternatively, on Linux, configure tcp_keepalive_intvl in the kernel (affecting default keep-alive configuration for all sockets): For more info see https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/. If this isn't dealt with, idle connections could be closed prematurely.
-2023-09-13 14:28:40 INFO  logo:65 - [192.168.119.49]:5701 [dev] [5.3.2] 
+2023-11-01 21:47:51 INFO  LifecycleService:65 - [192.168.0.33]:5701 [dev] [5.3.2] [192.168.0.33]:5701 is STARTED
+2023-11-01 21:47:51 INFO  MetadataRaftGroupManager:65 - [192.168.0.33]:5701 [dev] [5.3.2] CP Subsystem is waiting for 3 members to join the cluster. Current member count: 1
+2023-11-01 21:47:51 INFO  logo:65 - [192.168.0.33]:5702 [dev] [5.3.2] 
 	+       +  o    o     o     o---o o----o o      o---o     o     o----o o--o--o
 	+ +   + +  |    |    / \       /  |      |     /         / \    |         |   
 	+ + + + +  o----o   o   o     o   o----o |    o         o   o   o----o    |   
 	+ +   + +  |    |  /     \   /    |      |     \       /     \       |    |   
 	+       +  o    o o       o o---o o----o o----o o---o o       o o----o    o   
-2023-09-13 14:28:40 INFO  system:65 - [192.168.119.49]:5701 [dev] [5.3.2] Copyright (c) 2008-2023, Hazelcast, Inc. All Rights Reserved.
-2023-09-13 14:28:40 INFO  system:65 - [192.168.119.49]:5701 [dev] [5.3.2] Hazelcast Platform 5.3.2 (20230821 - b6cb479) starting at [192.168.119.49]:5701
-2023-09-13 14:28:40 INFO  system:65 - [192.168.119.49]:5701 [dev] [5.3.2] Cluster name: dev
-2023-09-13 14:28:40 INFO  system:65 - [192.168.119.49]:5701 [dev] [5.3.2] Integrity Checker is disabled. Fail-fast on corrupted executables will not be performed. For more information, see the documentation for Integrity Checker.
-2023-09-13 14:28:40 INFO  system:65 - [192.168.119.49]:5701 [dev] [5.3.2] The Jet engine is disabled.
+2023-11-01 21:47:51 INFO  system:65 - [192.168.0.33]:5702 [dev] [5.3.2] Copyright (c) 2008-2023, Hazelcast, Inc. All Rights Reserved.
+2023-11-01 21:47:51 INFO  system:65 - [192.168.0.33]:5702 [dev] [5.3.2] Hazelcast Platform 5.3.2 (20230821 - b6cb479) starting at [192.168.0.33]:5702
+2023-11-01 21:47:51 INFO  system:65 - [192.168.0.33]:5702 [dev] [5.3.2] Cluster name: dev
+2023-11-01 21:47:51 INFO  system:65 - [192.168.0.33]:5702 [dev] [5.3.2] Integrity Checker is disabled. Fail-fast on corrupted executables will not be performed. For more information, see the documentation for Integrity Checker.
+2023-11-01 21:47:51 INFO  system:65 - [192.168.0.33]:5702 [dev] [5.3.2] The Jet engine is disabled.
 To enable the Jet engine on the members, do one of the following:
   - Change member config using Java API: config.getJetConfig().setEnabled(true)
   - Change XML/YAML configuration property: Set hazelcast.jet.enabled to true
   - Add system property: -Dhz.jet.enabled=true (for Hazelcast embedded, works only when loading config via Config.load)
   - Add environment variable: HZ_JET_ENABLED=true (recommended when running container image. For Hazelcast embedded, works only when loading config via Config.load)
-2023-09-13 14:28:41 INFO  TpcServerBootstrap:65 - [192.168.119.49]:5701 [dev] [5.3.2] TPC: disabled
-2023-09-13 14:28:42 INFO  security:65 - [192.168.119.49]:5701 [dev] [5.3.2] Enable DEBUG/FINE log level for log category com.hazelcast.system.security  or use -Dhazelcast.security.recommendations system property to see security recommendations and the status of current config.
-2023-09-13 14:28:42 INFO  Node:65 - [192.168.119.49]:5701 [dev] [5.3.2] Using Multicast discovery
-2023-09-13 14:28:42 WARN  CPSubsystem:67 - [192.168.119.49]:5701 [dev] [5.3.2] CP Subsystem is not enabled. CP data structures will operate in UNSAFE mode! Please note that UNSAFE mode will not provide strong consistency guarantees.
-2023-09-13 14:28:43 INFO  Diagnostics:65 - [192.168.119.49]:5701 [dev] [5.3.2] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
-2023-09-13 14:28:43 INFO  LifecycleService:65 - [192.168.119.49]:5701 [dev] [5.3.2] [192.168.119.49]:5701 is STARTING
-2023-09-13 14:28:47 INFO  ClusterService:65 - [192.168.119.49]:5701 [dev] [5.3.2] 
+2023-11-01 21:47:51 INFO  TpcServerBootstrap:65 - [192.168.0.33]:5702 [dev] [5.3.2] TPC: disabled
+2023-11-01 21:47:51 INFO  security:65 - [192.168.0.33]:5702 [dev] [5.3.2] Enable DEBUG/FINE log level for log category com.hazelcast.system.security  or use -Dhazelcast.security.recommendations system property to see security recommendations and the status of current config.
+2023-11-01 21:47:51 INFO  Node:65 - [192.168.0.33]:5702 [dev] [5.3.2] Using Multicast discovery
+2023-11-01 21:47:51 INFO  CPSubsystem:65 - [192.168.0.33]:5702 [dev] [5.3.2] CP Subsystem is enabled with 3 members.
+2023-11-01 21:47:51 INFO  Diagnostics:65 - [192.168.0.33]:5702 [dev] [5.3.2] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+2023-11-01 21:47:51 INFO  LifecycleService:65 - [192.168.0.33]:5702 [dev] [5.3.2] [192.168.0.33]:5702 is STARTING
+2023-11-01 21:47:52 INFO  MulticastJoiner:65 - [192.168.0.33]:5702 [dev] [5.3.2] Trying to join to discovered node: [192.168.0.33]:5701
+2023-11-01 21:47:52 INFO  TcpServerConnection:65 - [192.168.0.33]:5701 [dev] [5.3.2] Initialized new cluster connection between /192.168.0.33:5701 and /192.168.0.33:51160
+2023-11-01 21:47:52 INFO  TcpServerConnection:65 - [192.168.0.33]:5702 [dev] [5.3.2] Initialized new cluster connection between /192.168.0.33:51160 and /192.168.0.33:5701
+2023-11-01 21:47:56 INFO  MetadataRaftGroupManager:65 - [192.168.0.33]:5701 [dev] [5.3.2] CP Subsystem is waiting for 3 members to join the cluster. Current member count: 1
+2023-11-01 21:47:57 INFO  ClusterService:65 - [192.168.0.33]:5701 [dev] [5.3.2] 
 
-Members {size:1, ver:1} [
-	Member [192.168.119.49]:5701 - f691e817-b8ca-4347-a890-eee9ae0a50a6 this
+Members {size:2, ver:2} [
+	Member [192.168.0.33]:5701 - 5a1db959-02ce-4321-b4f2-93b2c5dd2429 this
+	Member [192.168.0.33]:5702 - 6dddc385-87d1-410c-bfc7-9830e1323061
 ]
 
-2023-09-13 14:28:47 INFO  LifecycleService:65 - [192.168.119.49]:5701 [dev] [5.3.2] [192.168.119.49]:5701 is STARTED
-2023-09-13 14:28:47 INFO  PartitionStateManager:65 - [192.168.119.49]:5701 [dev] [5.3.2] Initializing cluster partition table arrangement...
-2023-09-13 14:29:09 INFO  Node:65 - [192.168.119.49]:5701 [dev] [5.3.2] Running shutdown hook... Current node state: ACTIVE
-2023-09-13 14:29:09 INFO  LifecycleService:65 - [192.168.119.49]:5701 [dev] [5.3.2] [192.168.119.49]:5701 is SHUTTING_DOWN
-2023-09-13 14:29:09 WARN  Node:67 - [192.168.119.49]:5701 [dev] [5.3.2] Terminating forcefully...
-2023-09-13 14:29:09 INFO  Node:65 - [192.168.119.49]:5701 [dev] [5.3.2] Shutting down multicast service...
-2023-09-13 14:29:09 INFO  Node:65 - [192.168.119.49]:5701 [dev] [5.3.2] Shutting down connection manager...
-2023-09-13 14:29:09 INFO  Node:65 - [192.168.119.49]:5701 [dev] [5.3.2] Shutting down node engine...
-2023-09-13 14:29:09 INFO  NodeExtension:65 - [192.168.119.49]:5701 [dev] [5.3.2] Destroying node NodeExtension.
-2023-09-13 14:29:09 INFO  Node:65 - [192.168.119.49]:5701 [dev] [5.3.2] Hazelcast Shutdown is completed in 12 ms.
-2023-09-13 14:29:09 INFO  LifecycleService:65 - [192.168.119.49]:5701 [dev] [5.3.2] [192.168.119.49]:5701 is SHUTDOWN
+2023-11-01 21:47:57 INFO  ClusterService:65 - [192.168.0.33]:5702 [dev] [5.3.2] 
+
+Members {size:2, ver:2} [
+	Member [192.168.0.33]:5701 - 5a1db959-02ce-4321-b4f2-93b2c5dd2429
+	Member [192.168.0.33]:5702 - 6dddc385-87d1-410c-bfc7-9830e1323061 this
+]
+
+2023-11-01 21:47:57 INFO  LifecycleService:65 - [192.168.0.33]:5702 [dev] [5.3.2] [192.168.0.33]:5702 is STARTED
+2023-11-01 21:47:57 INFO  logo:65 - [192.168.0.33]:5703 [dev] [5.3.2] 
+	+       +  o    o     o     o---o o----o o      o---o     o     o----o o--o--o
+	+ +   + +  |    |    / \       /  |      |     /         / \    |         |   
+	+ + + + +  o----o   o   o     o   o----o |    o         o   o   o----o    |   
+	+ +   + +  |    |  /     \   /    |      |     \       /     \       |    |   
+	+       +  o    o o       o o---o o----o o----o o---o o       o o----o    o   
+2023-11-01 21:47:57 INFO  system:65 - [192.168.0.33]:5703 [dev] [5.3.2] Copyright (c) 2008-2023, Hazelcast, Inc. All Rights Reserved.
+2023-11-01 21:47:57 INFO  system:65 - [192.168.0.33]:5703 [dev] [5.3.2] Hazelcast Platform 5.3.2 (20230821 - b6cb479) starting at [192.168.0.33]:5703
+2023-11-01 21:47:57 INFO  system:65 - [192.168.0.33]:5703 [dev] [5.3.2] Cluster name: dev
+2023-11-01 21:47:57 INFO  system:65 - [192.168.0.33]:5703 [dev] [5.3.2] Integrity Checker is disabled. Fail-fast on corrupted executables will not be performed. For more information, see the documentation for Integrity Checker.
+2023-11-01 21:47:57 INFO  system:65 - [192.168.0.33]:5703 [dev] [5.3.2] The Jet engine is disabled.
+To enable the Jet engine on the members, do one of the following:
+  - Change member config using Java API: config.getJetConfig().setEnabled(true)
+  - Change XML/YAML configuration property: Set hazelcast.jet.enabled to true
+  - Add system property: -Dhz.jet.enabled=true (for Hazelcast embedded, works only when loading config via Config.load)
+  - Add environment variable: HZ_JET_ENABLED=true (recommended when running container image. For Hazelcast embedded, works only when loading config via Config.load)
+2023-11-01 21:47:57 INFO  TpcServerBootstrap:65 - [192.168.0.33]:5703 [dev] [5.3.2] TPC: disabled
+2023-11-01 21:47:57 INFO  security:65 - [192.168.0.33]:5703 [dev] [5.3.2] Enable DEBUG/FINE log level for log category com.hazelcast.system.security  or use -Dhazelcast.security.recommendations system property to see security recommendations and the status of current config.
+2023-11-01 21:47:57 INFO  Node:65 - [192.168.0.33]:5703 [dev] [5.3.2] Using Multicast discovery
+2023-11-01 21:47:57 INFO  CPSubsystem:65 - [192.168.0.33]:5703 [dev] [5.3.2] CP Subsystem is enabled with 3 members.
+2023-11-01 21:47:57 INFO  Diagnostics:65 - [192.168.0.33]:5703 [dev] [5.3.2] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+2023-11-01 21:47:57 INFO  LifecycleService:65 - [192.168.0.33]:5703 [dev] [5.3.2] [192.168.0.33]:5703 is STARTING
+2023-11-01 21:47:57 INFO  MetadataRaftGroupManager:65 - [192.168.0.33]:5702 [dev] [5.3.2] CP Subsystem is waiting for 3 members to join the cluster. Current member count: 2
+2023-11-01 21:47:57 INFO  MulticastJoiner:65 - [192.168.0.33]:5703 [dev] [5.3.2] Trying to join to discovered node: [192.168.0.33]:5701
+2023-11-01 21:47:57 INFO  TcpServerConnection:65 - [192.168.0.33]:5701 [dev] [5.3.2] Initialized new cluster connection between /192.168.0.33:5701 and /192.168.0.33:51162
+2023-11-01 21:47:57 INFO  TcpServerConnection:65 - [192.168.0.33]:5703 [dev] [5.3.2] Initialized new cluster connection between /192.168.0.33:51162 and /192.168.0.33:5701
+2023-11-01 21:48:01 INFO  MetadataRaftGroupManager:65 - [192.168.0.33]:5701 [dev] [5.3.2] CP Subsystem is waiting for 3 members to join the cluster. Current member count: 2
+2023-11-01 21:48:02 INFO  MetadataRaftGroupManager:65 - [192.168.0.33]:5702 [dev] [5.3.2] CP Subsystem is waiting for 3 members to join the cluster. Current member count: 2
+2023-11-01 21:48:03 INFO  ClusterService:65 - [192.168.0.33]:5701 [dev] [5.3.2] 
+
+Members {size:3, ver:3} [
+	Member [192.168.0.33]:5701 - 5a1db959-02ce-4321-b4f2-93b2c5dd2429 this
+	Member [192.168.0.33]:5702 - 6dddc385-87d1-410c-bfc7-9830e1323061
+	Member [192.168.0.33]:5703 - 8b2ca1c7-d948-4124-83a8-d2150df48aed
+]
+
+2023-11-01 21:48:03 INFO  ClusterService:65 - [192.168.0.33]:5703 [dev] [5.3.2] 
+
+Members {size:3, ver:3} [
+	Member [192.168.0.33]:5701 - 5a1db959-02ce-4321-b4f2-93b2c5dd2429
+	Member [192.168.0.33]:5702 - 6dddc385-87d1-410c-bfc7-9830e1323061
+	Member [192.168.0.33]:5703 - 8b2ca1c7-d948-4124-83a8-d2150df48aed this
+]
+
+2023-11-01 21:48:03 INFO  ClusterService:65 - [192.168.0.33]:5702 [dev] [5.3.2] 
+
+Members {size:3, ver:3} [
+	Member [192.168.0.33]:5701 - 5a1db959-02ce-4321-b4f2-93b2c5dd2429
+	Member [192.168.0.33]:5702 - 6dddc385-87d1-410c-bfc7-9830e1323061 this
+	Member [192.168.0.33]:5703 - 8b2ca1c7-d948-4124-83a8-d2150df48aed
+]
+
+2023-11-01 21:48:03 INFO  TcpServerConnection:65 - [192.168.0.33]:5703 [dev] [5.3.2] Initialized new cluster connection between /192.168.0.33:5703 and /192.168.0.33:51163
+2023-11-01 21:48:03 INFO  TcpServerConnection:65 - [192.168.0.33]:5702 [dev] [5.3.2] Initialized new cluster connection between /192.168.0.33:51163 and /192.168.0.33:5703
+2023-11-01 21:48:03 INFO  TcpServerConnector:65 - [192.168.0.33]:5703 [dev] [5.3.2] Connecting to /192.168.0.33:5702, timeout: 10000, bind-any: true
+2023-11-01 21:48:03 INFO  TcpServerConnection:65 - [192.168.0.33]:5702 [dev] [5.3.2] Initialized new cluster connection between /192.168.0.33:5702 and /192.168.0.33:51164
+2023-11-01 21:48:03 INFO  TcpServerConnection:65 - [192.168.0.33]:5703 [dev] [5.3.2] Initialized new cluster connection between /192.168.0.33:51164 and /192.168.0.33:5702
+2023-11-01 21:48:03 INFO  RaftService:65 - [192.168.0.33]:5701 [dev] [5.3.2] RaftNode[CPGroupId{name='METADATA', seed=0, groupId=0}] is created with [RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'}, RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'}, RaftEndpoint{uuid='6dddc385-87d1-410c-bfc7-9830e1323061'}]
+2023-11-01 21:48:03 INFO  RaftNode(METADATA):65 - [192.168.0.33]:5701 [dev] [5.3.2] Status is set to: ACTIVE
+2023-11-01 21:48:03 INFO  PartitionStateManager:65 - [192.168.0.33]:5701 [dev] [5.3.2] Initializing cluster partition table arrangement...
+2023-11-01 21:48:03 INFO  RaftService:65 - [192.168.0.33]:5703 [dev] [5.3.2] RaftNode[CPGroupId{name='METADATA', seed=0, groupId=0}] is created with [RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'}, RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'}, RaftEndpoint{uuid='6dddc385-87d1-410c-bfc7-9830e1323061'}]
+2023-11-01 21:48:03 INFO  RaftNode(METADATA):65 - [192.168.0.33]:5703 [dev] [5.3.2] Status is set to: ACTIVE
+2023-11-01 21:48:03 INFO  RaftService:65 - [192.168.0.33]:5702 [dev] [5.3.2] RaftNode[CPGroupId{name='METADATA', seed=0, groupId=0}] is created with [RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'}, RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'}, RaftEndpoint{uuid='6dddc385-87d1-410c-bfc7-9830e1323061'}]
+2023-11-01 21:48:03 INFO  RaftNode(METADATA):65 - [192.168.0.33]:5702 [dev] [5.3.2] Status is set to: ACTIVE
+2023-11-01 21:48:04 INFO  LifecycleService:65 - [192.168.0.33]:5703 [dev] [5.3.2] [192.168.0.33]:5703 is STARTED
+2023-11-01 21:48:05 WARN  RaftNodeImpl$LeaderFailureDetectionTask(METADATA):67 - [192.168.0.33]:5701 [dev] [5.3.2] We are FOLLOWER and there is no current leader. Will start new election round...
+2023-11-01 21:48:05 INFO  PreVoteTask(METADATA):65 - [192.168.0.33]:5701 [dev] [5.3.2] Pre-vote started for next term: 1, last log index: 0, last log term: 0
+2023-11-01 21:48:05 INFO  RaftNode(METADATA):65 - [192.168.0.33]:5701 [dev] [5.3.2] 
+
+CP Group Members {groupId: METADATA(0), size:3, term:0, logIndex:0} [
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703}
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701} - FOLLOWER this
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}
+]
+
+2023-11-01 21:48:05 INFO  PreVoteRequestHandlerTask(METADATA):65 - [192.168.0.33]:5702 [dev] [5.3.2] Granted pre-vote for PreVoteRequest{candidate=RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'}, nextTerm=1, lastLogTerm=0, lastLogIndex=0}
+2023-11-01 21:48:05 INFO  PreVoteRequestHandlerTask(METADATA):65 - [192.168.0.33]:5703 [dev] [5.3.2] Granted pre-vote for PreVoteRequest{candidate=RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'}, nextTerm=1, lastLogTerm=0, lastLogIndex=0}
+2023-11-01 21:48:05 INFO  PreVoteResponseHandlerTask(METADATA):65 - [192.168.0.33]:5701 [dev] [5.3.2] Pre-vote granted from RaftEndpoint{uuid='6dddc385-87d1-410c-bfc7-9830e1323061'} for term: 1, number of votes: 2, majority: 2
+2023-11-01 21:48:05 INFO  PreVoteResponseHandlerTask(METADATA):65 - [192.168.0.33]:5701 [dev] [5.3.2] We have the majority during pre-vote phase. Let's start real election!
+2023-11-01 21:48:05 INFO  LeaderElectionTask(METADATA):65 - [192.168.0.33]:5701 [dev] [5.3.2] Leader election started for term: 1, last log index: 0, last log term: 0
+2023-11-01 21:48:05 INFO  RaftNode(METADATA):65 - [192.168.0.33]:5701 [dev] [5.3.2] 
+
+CP Group Members {groupId: METADATA(0), size:3, term:1, logIndex:0} [
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703}
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701} - CANDIDATE this
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}
+]
+
+2023-11-01 21:48:05 INFO  PreVoteResponseHandlerTask(METADATA):65 - [192.168.0.33]:5701 [dev] [5.3.2] Ignored PreVoteResponse{voter=RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'}, term=1, granted=true}. We are not FOLLOWER anymore.
+2023-11-01 21:48:05 INFO  VoteRequestHandlerTask(METADATA):65 - [192.168.0.33]:5702 [dev] [5.3.2] Moving to new term: 1 from current term: 0 after VoteRequest{candidate=RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'}, term=1, lastLogTerm=0, lastLogIndex=0, disruptive=false}
+2023-11-01 21:48:05 INFO  VoteRequestHandlerTask(METADATA):65 - [192.168.0.33]:5703 [dev] [5.3.2] Moving to new term: 1 from current term: 0 after VoteRequest{candidate=RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'}, term=1, lastLogTerm=0, lastLogIndex=0, disruptive=false}
+2023-11-01 21:48:05 INFO  RaftNode(METADATA):65 - [192.168.0.33]:5703 [dev] [5.3.2] 
+
+CP Group Members {groupId: METADATA(0), size:3, term:1, logIndex:0} [
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703} - FOLLOWER this
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701}
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}
+]
+
+2023-11-01 21:48:05 INFO  VoteRequestHandlerTask(METADATA):65 - [192.168.0.33]:5703 [dev] [5.3.2] Granted vote for VoteRequest{candidate=RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'}, term=1, lastLogTerm=0, lastLogIndex=0, disruptive=false}
+2023-11-01 21:48:05 INFO  RaftNode(METADATA):65 - [192.168.0.33]:5702 [dev] [5.3.2] 
+
+CP Group Members {groupId: METADATA(0), size:3, term:1, logIndex:0} [
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703}
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701}
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702} - FOLLOWER this
+]
+
+2023-11-01 21:48:05 INFO  VoteRequestHandlerTask(METADATA):65 - [192.168.0.33]:5702 [dev] [5.3.2] Granted vote for VoteRequest{candidate=RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'}, term=1, lastLogTerm=0, lastLogIndex=0, disruptive=false}
+2023-11-01 21:48:05 INFO  VoteResponseHandlerTask(METADATA):65 - [192.168.0.33]:5701 [dev] [5.3.2] Vote granted from RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'} for term: 1, number of votes: 2, majority: 2
+2023-11-01 21:48:05 INFO  VoteResponseHandlerTask(METADATA):65 - [192.168.0.33]:5701 [dev] [5.3.2] We are the LEADER!
+2023-11-01 21:48:05 INFO  RaftNode(METADATA):65 - [192.168.0.33]:5701 [dev] [5.3.2] 
+
+CP Group Members {groupId: METADATA(0), size:3, term:1, logIndex:0} [
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703}
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701} - LEADER this
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}
+]
+
+2023-11-01 21:48:05 INFO  VoteResponseHandlerTask(METADATA):65 - [192.168.0.33]:5701 [dev] [5.3.2] Ignored VoteResponse{voter=RaftEndpoint{uuid='6dddc385-87d1-410c-bfc7-9830e1323061'}, term=1, granted=true}. We are not CANDIDATE anymore.
+2023-11-01 21:48:05 INFO  AppendRequestHandlerTask(METADATA):65 - [192.168.0.33]:5702 [dev] [5.3.2] Setting leader: RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'}
+2023-11-01 21:48:05 INFO  AppendRequestHandlerTask(METADATA):65 - [192.168.0.33]:5703 [dev] [5.3.2] Setting leader: RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'}
+2023-11-01 21:48:05 INFO  RaftNode(METADATA):65 - [192.168.0.33]:5703 [dev] [5.3.2] 
+
+CP Group Members {groupId: METADATA(0), size:3, term:1, logIndex:0} [
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703} - FOLLOWER this
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701} - LEADER
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}
+]
+
+2023-11-01 21:48:05 INFO  RaftNode(METADATA):65 - [192.168.0.33]:5702 [dev] [5.3.2] 
+
+CP Group Members {groupId: METADATA(0), size:3, term:1, logIndex:0} [
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703}
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701} - LEADER
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702} - FOLLOWER this
+]
+
+2023-11-01 21:48:06 INFO  MetadataRaftGroupManager:65 - [192.168.0.33]:5701 [dev] [5.3.2] CP Subsystem is initialized with: [CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703}, CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701}, CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}]
+2023-11-01 21:48:06 INFO  MetadataRaftGroupManager:65 - [192.168.0.33]:5703 [dev] [5.3.2] CP Subsystem is initialized with: [CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703}, CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701}, CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}]
+2023-11-01 21:48:06 INFO  MetadataRaftGroupManager:65 - [192.168.0.33]:5702 [dev] [5.3.2] CP Subsystem is initialized with: [CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703}, CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701}, CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}]
+2023-11-01 21:48:06 INFO  MetadataRaftGroupManager:65 - [192.168.0.33]:5701 [dev] [5.3.2] New CPGroupId{name='default', seed=0, groupId=9145} is created with [CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}, CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701}, CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703}]
+2023-11-01 21:48:06 INFO  MetadataRaftGroupManager:65 - [192.168.0.33]:5702 [dev] [5.3.2] New CPGroupId{name='default', seed=0, groupId=9145} is created with [CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}, CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701}, CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703}]
+2023-11-01 21:48:06 INFO  MetadataRaftGroupManager:65 - [192.168.0.33]:5703 [dev] [5.3.2] New CPGroupId{name='default', seed=0, groupId=9145} is created with [CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}, CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701}, CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703}]
+2023-11-01 21:48:06 INFO  RaftService:65 - [192.168.0.33]:5702 [dev] [5.3.2] RaftNode[CPGroupId{name='default', seed=0, groupId=9145}] is created with [RaftEndpoint{uuid='6dddc385-87d1-410c-bfc7-9830e1323061'}, RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'}, RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'}]
+2023-11-01 21:48:06 INFO  RaftNode(default):65 - [192.168.0.33]:5702 [dev] [5.3.2] Status is set to: ACTIVE
+2023-11-01 21:48:06 INFO  RaftService:65 - [192.168.0.33]:5701 [dev] [5.3.2] RaftNode[CPGroupId{name='default', seed=0, groupId=9145}] is created with [RaftEndpoint{uuid='6dddc385-87d1-410c-bfc7-9830e1323061'}, RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'}, RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'}]
+2023-11-01 21:48:06 INFO  RaftNode(default):65 - [192.168.0.33]:5703 [dev] [5.3.2] Status is set to: ACTIVE
+2023-11-01 21:48:06 INFO  RaftNode(default):65 - [192.168.0.33]:5701 [dev] [5.3.2] Status is set to: ACTIVE
+2023-11-01 21:48:06 INFO  RaftService:65 - [192.168.0.33]:5703 [dev] [5.3.2] RaftNode[CPGroupId{name='default', seed=0, groupId=9145}] is created with [RaftEndpoint{uuid='6dddc385-87d1-410c-bfc7-9830e1323061'}, RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'}, RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'}]
+2023-11-01 21:48:08 WARN  RaftNodeImpl$LeaderFailureDetectionTask(default):67 - [192.168.0.33]:5703 [dev] [5.3.2] We are FOLLOWER and there is no current leader. Will start new election round...
+2023-11-01 21:48:08 INFO  PreVoteTask(default):65 - [192.168.0.33]:5703 [dev] [5.3.2] Pre-vote started for next term: 1, last log index: 0, last log term: 0
+2023-11-01 21:48:08 INFO  RaftNode(default):65 - [192.168.0.33]:5703 [dev] [5.3.2] 
+
+CP Group Members {groupId: default(9145), size:3, term:0, logIndex:0} [
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701}
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703} - FOLLOWER this
+]
+
+2023-11-01 21:48:08 INFO  PreVoteRequestHandlerTask(default):65 - [192.168.0.33]:5702 [dev] [5.3.2] Granted pre-vote for PreVoteRequest{candidate=RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'}, nextTerm=1, lastLogTerm=0, lastLogIndex=0}
+2023-11-01 21:48:08 INFO  PreVoteRequestHandlerTask(default):65 - [192.168.0.33]:5701 [dev] [5.3.2] Granted pre-vote for PreVoteRequest{candidate=RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'}, nextTerm=1, lastLogTerm=0, lastLogIndex=0}
+2023-11-01 21:48:08 INFO  PreVoteResponseHandlerTask(default):65 - [192.168.0.33]:5703 [dev] [5.3.2] Pre-vote granted from RaftEndpoint{uuid='6dddc385-87d1-410c-bfc7-9830e1323061'} for term: 1, number of votes: 2, majority: 2
+2023-11-01 21:48:08 INFO  PreVoteResponseHandlerTask(default):65 - [192.168.0.33]:5703 [dev] [5.3.2] We have the majority during pre-vote phase. Let's start real election!
+2023-11-01 21:48:08 INFO  LeaderElectionTask(default):65 - [192.168.0.33]:5703 [dev] [5.3.2] Leader election started for term: 1, last log index: 0, last log term: 0
+2023-11-01 21:48:08 INFO  RaftNode(default):65 - [192.168.0.33]:5703 [dev] [5.3.2] 
+
+CP Group Members {groupId: default(9145), size:3, term:1, logIndex:0} [
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701}
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703} - CANDIDATE this
+]
+
+2023-11-01 21:48:08 INFO  VoteRequestHandlerTask(default):65 - [192.168.0.33]:5702 [dev] [5.3.2] Moving to new term: 1 from current term: 0 after VoteRequest{candidate=RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'}, term=1, lastLogTerm=0, lastLogIndex=0, disruptive=false}
+2023-11-01 21:48:08 INFO  VoteRequestHandlerTask(default):65 - [192.168.0.33]:5701 [dev] [5.3.2] Moving to new term: 1 from current term: 0 after VoteRequest{candidate=RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'}, term=1, lastLogTerm=0, lastLogIndex=0, disruptive=false}
+2023-11-01 21:48:08 INFO  PreVoteResponseHandlerTask(default):65 - [192.168.0.33]:5703 [dev] [5.3.2] Ignored PreVoteResponse{voter=RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'}, term=1, granted=true}. We are not FOLLOWER anymore.
+2023-11-01 21:48:08 INFO  RaftNode(default):65 - [192.168.0.33]:5701 [dev] [5.3.2] 
+
+CP Group Members {groupId: default(9145), size:3, term:1, logIndex:0} [
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701} - FOLLOWER this
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703}
+]
+
+2023-11-01 21:48:08 INFO  VoteRequestHandlerTask(default):65 - [192.168.0.33]:5701 [dev] [5.3.2] Granted vote for VoteRequest{candidate=RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'}, term=1, lastLogTerm=0, lastLogIndex=0, disruptive=false}
+2023-11-01 21:48:08 INFO  RaftNode(default):65 - [192.168.0.33]:5702 [dev] [5.3.2] 
+
+CP Group Members {groupId: default(9145), size:3, term:1, logIndex:0} [
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702} - FOLLOWER this
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701}
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703}
+]
+
+2023-11-01 21:48:08 INFO  VoteRequestHandlerTask(default):65 - [192.168.0.33]:5702 [dev] [5.3.2] Granted vote for VoteRequest{candidate=RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'}, term=1, lastLogTerm=0, lastLogIndex=0, disruptive=false}
+2023-11-01 21:48:08 INFO  VoteResponseHandlerTask(default):65 - [192.168.0.33]:5703 [dev] [5.3.2] Vote granted from RaftEndpoint{uuid='5a1db959-02ce-4321-b4f2-93b2c5dd2429'} for term: 1, number of votes: 2, majority: 2
+2023-11-01 21:48:08 INFO  VoteResponseHandlerTask(default):65 - [192.168.0.33]:5703 [dev] [5.3.2] We are the LEADER!
+2023-11-01 21:48:08 INFO  RaftNode(default):65 - [192.168.0.33]:5703 [dev] [5.3.2] 
+
+CP Group Members {groupId: default(9145), size:3, term:1, logIndex:0} [
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701}
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703} - LEADER this
+]
+
+2023-11-01 21:48:08 INFO  AppendRequestHandlerTask(default):65 - [192.168.0.33]:5702 [dev] [5.3.2] Setting leader: RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'}
+2023-11-01 21:48:08 INFO  VoteResponseHandlerTask(default):65 - [192.168.0.33]:5703 [dev] [5.3.2] Ignored VoteResponse{voter=RaftEndpoint{uuid='6dddc385-87d1-410c-bfc7-9830e1323061'}, term=1, granted=true}. We are not CANDIDATE anymore.
+2023-11-01 21:48:08 INFO  AppendRequestHandlerTask(default):65 - [192.168.0.33]:5701 [dev] [5.3.2] Setting leader: RaftEndpoint{uuid='8b2ca1c7-d948-4124-83a8-d2150df48aed'}
+2023-11-01 21:48:08 INFO  RaftNode(default):65 - [192.168.0.33]:5702 [dev] [5.3.2] 
+
+CP Group Members {groupId: default(9145), size:3, term:1, logIndex:0} [
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702} - FOLLOWER this
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701}
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703} - LEADER
+]
+
+2023-11-01 21:48:08 INFO  RaftNode(default):65 - [192.168.0.33]:5701 [dev] [5.3.2] 
+
+CP Group Members {groupId: default(9145), size:3, term:1, logIndex:0} [
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702}
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701} - FOLLOWER this
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703} - LEADER
+]
+
+2023-11-01 21:49:06 INFO  RaftGroupMembershipManager:65 - [192.168.0.33]:5701 [dev] [5.3.2] Current leadership claims:
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702} priority 0 has 0,
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703} priority 0 has 1,
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701} priority 0 has 1, leaderships.
+2023-11-01 21:49:06 INFO  RaftGroupMembershipManager:65 - [192.168.0.33]:5701 [dev] [5.3.2] Current leadership claims:
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702} priority 0 has 0,
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703} priority 0 has 1,
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701} priority 0 has 1, leaderships.
+2023-11-01 21:49:06 INFO  RaftGroupMembershipManager:65 - [192.168.0.33]:5701 [dev] [5.3.2] Searching a candidate transfer leadership from CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703} with 1 leaderships.
+2023-11-01 21:49:06 INFO  RaftGroupMembershipManager:65 - [192.168.0.33]:5701 [dev] [5.3.2] No candidate could be found to get leadership from CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703}. Skipping to next...
+2023-11-01 21:49:06 INFO  RaftGroupMembershipManager:65 - [192.168.0.33]:5701 [dev] [5.3.2] Current leadership claims:
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702} priority 0 has 0,
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703} priority 0 has 1,
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701} priority 0 has 1, leaderships.
+2023-11-01 21:49:06 INFO  RaftGroupMembershipManager:65 - [192.168.0.33]:5701 [dev] [5.3.2] Searching a candidate transfer leadership from CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701} with 1 leaderships.
+2023-11-01 21:49:06 INFO  RaftGroupMembershipManager:65 - [192.168.0.33]:5701 [dev] [5.3.2] No candidate could be found to get leadership from CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701}. Skipping to next...
+2023-11-01 21:49:06 INFO  RaftGroupMembershipManager:65 - [192.168.0.33]:5701 [dev] [5.3.2] Current leadership claims:
+	CPMember{uuid=6dddc385-87d1-410c-bfc7-9830e1323061, address=[192.168.0.33]:5702} priority 0 has 0,
+	CPMember{uuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, address=[192.168.0.33]:5703} priority 0 has 1,
+	CPMember{uuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, address=[192.168.0.33]:5701} priority 0 has 1, leaderships.
+2023-11-01 21:49:06 INFO  RaftGroupMembershipManager:65 - [192.168.0.33]:5701 [dev] [5.3.2] CPGroup leadership balance is fine, cannot rebalance further...
+2023-11-01 21:49:31 INFO  HealthMonitor:65 - [192.168.0.33]:5701 [dev] [5.3.2] processors=4, physical.memory.total=15.9G, physical.memory.free=5.1G, swap.space.total=0, swap.space.free=0, heap.memory.used=20.2M, heap.memory.free=23.8M, heap.memory.total=54.0M, heap.memory.max=4.0G, heap.memory.used/total=37.44%, heap.memory.used/max=0.50%, minor.gc.count=94, minor.gc.time=156ms, major.gc.count=0, major.gc.time=0ms, load.process=0.00%, load.system=93.41%, load.systemAverage=n/a thread.count=152, thread.peakCount=155, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.client.query.size=0, executor.q.client.blocking.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=2, executor.q.priorityOperation.size=0, operations.completed.count=1660504, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=1, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=10, proxy.count=1, clientEndpoint.count=0, connection.active.count=2, client.connection.count=0, connection.count=2
+2023-11-01 21:49:37 INFO  HealthMonitor:65 - [192.168.0.33]:5702 [dev] [5.3.2] processors=4, physical.memory.total=15.9G, physical.memory.free=5.0G, swap.space.total=0, swap.space.free=0, heap.memory.used=32.3M, heap.memory.free=117.7M, heap.memory.total=156.0M, heap.memory.max=4.0G, heap.memory.used/total=20.70%, heap.memory.used/max=0.79%, minor.gc.count=108, minor.gc.time=202ms, major.gc.count=0, major.gc.time=0ms, load.process=0.00%, load.system=99.89%, load.systemAverage=n/a thread.count=153, thread.peakCount=155, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.client.query.size=0, executor.q.client.blocking.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=541355, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=1, clientEndpoint.count=0, connection.active.count=3, client.connection.count=0, connection.count=2
+2023-11-01 21:49:44 INFO  HealthMonitor:65 - [192.168.0.33]:5703 [dev] [5.3.2] processors=4, physical.memory.total=15.9G, physical.memory.free=5.0G, swap.space.total=0, swap.space.free=0, heap.memory.used=67.8M, heap.memory.free=86.2M, heap.memory.total=156.0M, heap.memory.max=4.0G, heap.memory.used/total=43.49%, heap.memory.used/max=1.67%, minor.gc.count=116, minor.gc.time=231ms, major.gc.count=0, major.gc.time=0ms, load.process=0.00%, load.system=100.00%, load.systemAverage=n/a thread.count=156, thread.peakCount=156, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.client.query.size=0, executor.q.client.blocking.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=200159, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=1, clientEndpoint.count=0, connection.active.count=3, client.connection.count=0, connection.count=2
+2023-11-01 21:49:45 INFO  Node:65 - [192.168.0.33]:5703 [dev] [5.3.2] Running shutdown hook... Current node state: ACTIVE
+2023-11-01 21:49:45 INFO  Node:65 - [192.168.0.33]:5702 [dev] [5.3.2] Running shutdown hook... Current node state: ACTIVE
+2023-11-01 21:49:45 INFO  LifecycleService:65 - [192.168.0.33]:5703 [dev] [5.3.2] [192.168.0.33]:5703 is SHUTTING_DOWN
+2023-11-01 21:49:45 INFO  LifecycleService:65 - [192.168.0.33]:5702 [dev] [5.3.2] [192.168.0.33]:5702 is SHUTTING_DOWN
+2023-11-01 21:49:45 INFO  Node:65 - [192.168.0.33]:5701 [dev] [5.3.2] Running shutdown hook... Current node state: ACTIVE
+2023-11-01 21:49:45 INFO  LifecycleService:65 - [192.168.0.33]:5701 [dev] [5.3.2] [192.168.0.33]:5701 is SHUTTING_DOWN
+2023-11-01 21:49:45 WARN  Node:67 - [192.168.0.33]:5703 [dev] [5.3.2] Terminating forcefully...
+2023-11-01 21:49:45 WARN  Node:67 - [192.168.0.33]:5702 [dev] [5.3.2] Terminating forcefully...
+2023-11-01 21:49:45 WARN  Node:67 - [192.168.0.33]:5701 [dev] [5.3.2] Terminating forcefully...
+2023-11-01 21:49:45 INFO  Node:65 - [192.168.0.33]:5702 [dev] [5.3.2] Shutting down multicast service...
+2023-11-01 21:49:45 INFO  Node:65 - [192.168.0.33]:5703 [dev] [5.3.2] Shutting down multicast service...
+2023-11-01 21:49:45 INFO  Node:65 - [192.168.0.33]:5701 [dev] [5.3.2] Shutting down multicast service...
+2023-11-01 21:49:45 INFO  Node:65 - [192.168.0.33]:5701 [dev] [5.3.2] Shutting down connection manager...
+2023-11-01 21:49:45 INFO  Node:65 - [192.168.0.33]:5702 [dev] [5.3.2] Shutting down connection manager...
+2023-11-01 21:49:45 INFO  Node:65 - [192.168.0.33]:5703 [dev] [5.3.2] Shutting down connection manager...
+2023-11-01 21:49:45 INFO  TcpServerConnection:65 - [192.168.0.33]:5703 [dev] [5.3.2] Connection[id=1, /192.168.0.33:51162->/192.168.0.33:5701, qualifier=null, endpoint=[192.168.0.33]:5701, remoteUuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, alive=false, connectionType=MEMBER, planeIndex=0] closed. Reason: TcpServer is stopping
+2023-11-01 21:49:45 INFO  TcpServerConnection:65 - [192.168.0.33]:5702 [dev] [5.3.2] Connection[id=1, /192.168.0.33:51160->/192.168.0.33:5701, qualifier=null, endpoint=[192.168.0.33]:5701, remoteUuid=5a1db959-02ce-4321-b4f2-93b2c5dd2429, alive=false, connectionType=MEMBER, planeIndex=0] closed. Reason: TcpServer is stopping
+2023-11-01 21:49:45 INFO  TcpServerConnection:65 - [192.168.0.33]:5701 [dev] [5.3.2] Connection[id=1, /192.168.0.33:5701->/192.168.0.33:51160, qualifier=null, endpoint=[192.168.0.33]:5702, remoteUuid=6dddc385-87d1-410c-bfc7-9830e1323061, alive=false, connectionType=MEMBER, planeIndex=0] closed. Reason: TcpServer is stopping
+2023-11-01 21:49:45 INFO  TcpServerConnection:65 - [192.168.0.33]:5701 [dev] [5.3.2] Connection[id=2, /192.168.0.33:5701->/192.168.0.33:51162, qualifier=null, endpoint=[192.168.0.33]:5703, remoteUuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, alive=false, connectionType=MEMBER, planeIndex=0] closed. Reason: Connection closed by the other side
+2023-11-01 21:49:45 INFO  TcpServerConnection:65 - [192.168.0.33]:5702 [dev] [5.3.2] Connection[id=3, /192.168.0.33:5702->/192.168.0.33:51164, qualifier=null, endpoint=[192.168.0.33]:5703, remoteUuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, alive=false, connectionType=MEMBER, planeIndex=0] closed. Reason: TcpServer is stopping
+2023-11-01 21:49:45 INFO  TcpServerConnection:65 - [192.168.0.33]:5703 [dev] [5.3.2] Connection[id=3, /192.168.0.33:51164->/192.168.0.33:5702, qualifier=null, endpoint=[192.168.0.33]:5702, remoteUuid=6dddc385-87d1-410c-bfc7-9830e1323061, alive=false, connectionType=MEMBER, planeIndex=0] closed. Reason: TcpServer is stopping
+2023-11-01 21:49:45 INFO  TcpServerConnection:65 - [192.168.0.33]:5702 [dev] [5.3.2] Connection[id=2, /192.168.0.33:51163->/192.168.0.33:5703, qualifier=null, endpoint=[192.168.0.33]:5703, remoteUuid=8b2ca1c7-d948-4124-83a8-d2150df48aed, alive=false, connectionType=MEMBER, planeIndex=0] closed. Reason: TcpServer is stopping
+2023-11-01 21:49:45 INFO  Node:65 - [192.168.0.33]:5702 [dev] [5.3.2] Shutting down node engine...
+2023-11-01 21:49:45 INFO  TcpServerConnection:65 - [192.168.0.33]:5703 [dev] [5.3.2] Connection[id=2, /192.168.0.33:5703->/192.168.0.33:51163, qualifier=null, endpoint=[192.168.0.33]:5702, remoteUuid=6dddc385-87d1-410c-bfc7-9830e1323061, alive=false, connectionType=MEMBER, planeIndex=0] closed. Reason: TcpServer is stopping
+2023-11-01 21:49:45 INFO  Node:65 - [192.168.0.33]:5701 [dev] [5.3.2] Shutting down node engine...
+2023-11-01 21:49:45 INFO  Node:65 - [192.168.0.33]:5703 [dev] [5.3.2] Shutting down node engine...
+2023-11-01 21:49:45 INFO  NodeExtension:65 - [192.168.0.33]:5702 [dev] [5.3.2] Destroying node NodeExtension.
+2023-11-01 21:49:45 INFO  NodeExtension:65 - [192.168.0.33]:5703 [dev] [5.3.2] Destroying node NodeExtension.
+2023-11-01 21:49:45 INFO  NodeExtension:65 - [192.168.0.33]:5701 [dev] [5.3.2] Destroying node NodeExtension.
+2023-11-01 21:49:45 INFO  Node:65 - [192.168.0.33]:5703 [dev] [5.3.2] Hazelcast Shutdown is completed in 46 ms.
+2023-11-01 21:49:45 INFO  Node:65 - [192.168.0.33]:5702 [dev] [5.3.2] Hazelcast Shutdown is completed in 46 ms.
+2023-11-01 21:49:45 INFO  LifecycleService:65 - [192.168.0.33]:5702 [dev] [5.3.2] [192.168.0.33]:5702 is SHUTDOWN
+2023-11-01 21:49:45 INFO  LifecycleService:65 - [192.168.0.33]:5703 [dev] [5.3.2] [192.168.0.33]:5703 is SHUTDOWN
+2023-11-01 21:49:45 INFO  Node:65 - [192.168.0.33]:5701 [dev] [5.3.2] Hazelcast Shutdown is completed in 47 ms.
+2023-11-01 21:49:45 INFO  LifecycleService:65 - [192.168.0.33]:5701 [dev] [5.3.2] [192.168.0.33]:5701 is SHUTDOWN

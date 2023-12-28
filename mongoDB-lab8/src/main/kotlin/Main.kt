@@ -105,19 +105,26 @@ fun main() {
     // Task 5: Average cost of the order
     println("*** TASK 5: Average cost of the order ***");
     val mapAverageCostOrder = """
-        function() {
-            emit("average", this.total_sum);
-        }
-    """.trimIndent()
+    function() {
+        emit("average", {sum: this.total_sum, count: 1});
+    }
+""".trimIndent()
 
     val reduceAverageCostOrder = """
-        function(key, values) {
-            return Array.sum(values) / values.length;
-        }
-    """.trimIndent()
+    function(key, values) {
+        return values.reduce((acc, val) => ({sum: acc.sum + val.sum, count: acc.count + val.count}));
+    }
+""".trimIndent()
+
+    val finalizeAverageCostOrder = """
+    function(key, reducedValue) {
+        return reducedValue.sum / reducedValue.count;
+    }
+""".trimIndent()
 
     val averageCostOrderResult = database.getCollection<Document>("orders")
         .mapReduce<Document>(mapAverageCostOrder, reduceAverageCostOrder)
+        .finalizeFunction(finalizeAverageCostOrder)
         .first()
 
     println("Average cost of the order: $averageCostOrderResult")
@@ -125,20 +132,27 @@ fun main() {
     // Task 6: Average cost of each customer's order
     println("*** TASK 6: Average cost of each customer's order ***");
     val mapAverageCostCustomerOrder = """
-        function() {
-            var customerName = this.customer.name + " " + this.customer.surname;
-            emit(customerName, this.total_sum);
-        }
-    """.trimIndent()
+    function() {
+        var customerName = this.customer.name + " " + this.customer.surname;
+        emit(customerName, {sum: this.total_sum, count: 1});
+    }
+""".trimIndent()
 
     val reduceAverageCostCustomerOrder = """
-        function(key, values) {
-            return Array.sum(values) / values.length;
-        }
-    """.trimIndent()
+    function(key, values) {
+        return values.reduce((acc, val) => ({sum: acc.sum + val.sum, count: acc.count + val.count}));
+    }
+""".trimIndent()
+
+    val finalizeAverageCostCustomerOrder = """
+    function(key, reducedValue) {
+        return reducedValue.sum / reducedValue.count;
+    }
+""".trimIndent()
 
     val averageCostCustomerOrderResult = database.getCollection<Document>("orders")
         .mapReduce<Document>(mapAverageCostCustomerOrder, reduceAverageCostCustomerOrder)
+        .finalizeFunction(finalizeAverageCostCustomerOrder)
         .toList()
 
     println("Average cost of each customer's order:")
@@ -185,7 +199,7 @@ fun main() {
     val reduceListCustomersPerProduct = """
         function(key, values) {
             return values.filter(function(v, i, self) {
-                return self.indexOf(v) === i; // Unique customers
+                return self.indexOf(v) === i; 
             });
         }
     """.trimIndent()
@@ -278,13 +292,13 @@ fun main() {
         .action(MapReduceAction.REPLACE)
         .toCollection()
 
-    // Query the result collection
     val summerOrdersResult = database.getCollection<Document>("summerOrders").find().toList()
     println("Incremental Map/Reduce for Summer Orders:")
     summerOrdersResult.forEach { println(it) }
 
     // Task 12: Order Dynamics for Each User
     println("*** TASK 12: Order Dynamics for Each User ***")
+    // First M/R collect
     val mapOrderDynamics = """
     function() {
         var date = new Date(this.date);
@@ -293,66 +307,53 @@ fun main() {
         var customerName = this.customer.name + " " + this.customer.surname;
         emit({customer: customerName, month: month, year: year}, this.total_sum);
     }
-    """.trimIndent()
+""".trimIndent()
 
     val reduceOrderDynamics = """
-        function(key, values) {
-            return values.reduce(function(a, b) { return a + b; }, 0);
-        }
-    """.trimIndent()
+    function(key, values) {
+        return Array.sum(values);
+    }
+""".trimIndent()
 
-    // Perform MapReduce operation
     database.getCollection<Document>("orders")
         .mapReduce<Document>(mapOrderDynamics, reduceOrderDynamics)
-        .collectionName("orderDynamics")
+        .collectionName("tempOrderDynamics")
         .action(MapReduceAction.REPLACE)
         .toCollection()
 
-    // Post-process the map-reduce result
-    val orderDynamicsCollection = database.getCollection<Document>("orderDynamics")
-    val orderDynamicsData = orderDynamicsCollection.find().toList()
-    val orderDynamicsResult = calculateDifferences(orderDynamicsData)
+    //Second M/R difference calculation
+    val mapOrderDynamicsDifference = """
+    function() {
+        emit(this._id.customer, {month: this._id.month, year: this._id.year, total: this.value});
+    }
+""".trimIndent()
+
+    val reduceOrderDynamicsDifference = """
+    function(customer, values) {
+        values.sort(function(a, b) {
+            return a.year - b.year || a.month - b.month;
+        });
+
+        var result = [];
+        for (var i = 1; i < values.length; i++) {
+            var monthDifference = values[i].total - values[i-1].total;
+            result.push({year: values[i].year, month: values[i].month, difference: monthDifference});
+        }
+        return result;
+    }
+""".trimIndent()
+
+    database.getCollection<Document>("tempOrderDynamics")
+        .mapReduce<Document>(mapOrderDynamicsDifference, reduceOrderDynamicsDifference)
+        .collectionName("finalOrderDynamics")
+        .action(MapReduceAction.REPLACE)
+        .toCollection()
+
+    val orderDynamicsCollection = database.getCollection<Document>("finalOrderDynamics")
+    val orderDynamicsResult = orderDynamicsCollection.find().toList()
 
     println("Order Dynamics for Each User:")
     orderDynamicsResult.forEach { println(it) }
 
     client.close()
-}
-
-fun calculateDifferences(data: List<Document>): List<Document> {
-    val currentYear = LocalDate.now().year
-    val previousYear = currentYear - 1
-    val dynamics = mutableListOf<Document>()
-
-    val organizedData = data.groupBy { doc ->
-        val id = doc["_id"] as Document
-        "${id["customer"]}_${id["month"]}_${id["year"]}"
-    }.mapValues { (_, values) ->
-        values.sumOf { (it["value"] as Number).toDouble() }
-    }
-
-    // Calculate the differences.
-    organizedData.forEach { (key, amount) ->
-        val parts = key.split('_')
-        val customer = parts[0]
-        val month = round(parts[1].toDouble()).toInt()
-        val year = round(parts[2].toDouble()).toInt()
-
-        if (year == currentYear) {
-            val prevYearKey = "${customer}_${month}_${previousYear}"
-            val prevYearAmount = organizedData[prevYearKey]?.toDouble() ?: 0.0
-            val diff = amount - prevYearAmount
-
-            dynamics.add(Document().apply {
-                append("name", customer)
-                append("month", month)
-                append("year", year)
-                append("amount", amount)
-                append("prev_year_amount", prevYearAmount)
-                append("diff", diff)
-            })
-        }
-    }
-
-    return dynamics
 }

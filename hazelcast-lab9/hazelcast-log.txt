@@ -1,22 +1,22 @@
-2023-12-23 20:24:38 WARN  HazelcastInstanceFactory:50 - Hazelcast is starting in a Java modular environment (Java 9 and newer) but without proper access to required Java packages. Use additional Java arguments to provide Hazelcast access to Java internal API. The internal API access is used to get the best performance results. Arguments to be used:
+2023-12-28 11:24:31 WARN  HazelcastInstanceFactory:50 - Hazelcast is starting in a Java modular environment (Java 9 and newer) but without proper access to required Java packages. Use additional Java arguments to provide Hazelcast access to Java internal API. The internal API access is used to get the best performance results. Arguments to be used:
  --add-modules java.se --add-exports java.base/jdk.internal.ref=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens java.management/sun.management=ALL-UNNAMED --add-opens jdk.management/com.sun.management.internal=ALL-UNNAMED
-2023-12-23 20:24:39 WARN  AddressPicker:67 - [LOCAL] [dev] [5.3.6] Ignoring TCP_KEEPCOUNT. It seems your JDK does not support jdk.net.ExtendedSocketOptions on this OS. Try upgrading to the latest JDK or check with your JDK vendor.Alternatively, on Linux, configure tcp_keepalive_probes in the kernel (affecting default keep-alive configuration for all sockets): For more info see https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/. If this isn't dealt with, idle connections could be closed prematurely.
-2023-12-23 20:24:39 WARN  AddressPicker:67 - [LOCAL] [dev] [5.3.6] Ignoring TCP_KEEPIDLE. It seems your JDK does not support jdk.net.ExtendedSocketOptions on this OS. Try upgrading to the latest JDK or check with your JDK vendor.Alternatively, on Linux, configure tcp_keepalive_time in the kernel (affecting default keep-alive configuration for all sockets): For more info see https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/. If this isn't dealt with, idle connections could be closed prematurely.
-2023-12-23 20:24:39 WARN  AddressPicker:67 - [LOCAL] [dev] [5.3.6] Ignoring TCP_KEEPINTERVAL. It seems your JDK does not support jdk.net.ExtendedSocketOptions on this OS. Try upgrading to the latest JDK or check with your JDK vendor.Alternatively, on Linux, configure tcp_keepalive_intvl in the kernel (affecting default keep-alive configuration for all sockets): For more info see https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/. If this isn't dealt with, idle connections could be closed prematurely.
-2023-12-23 20:24:39 INFO  logo:65 - [192.168.56.1]:5701 [dev] [5.3.6] 
+2023-12-28 11:24:31 WARN  AddressPicker:67 - [LOCAL] [dev] [5.3.6] Ignoring TCP_KEEPCOUNT. It seems your JDK does not support jdk.net.ExtendedSocketOptions on this OS. Try upgrading to the latest JDK or check with your JDK vendor.Alternatively, on Linux, configure tcp_keepalive_probes in the kernel (affecting default keep-alive configuration for all sockets): For more info see https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/. If this isn't dealt with, idle connections could be closed prematurely.
+2023-12-28 11:24:31 WARN  AddressPicker:67 - [LOCAL] [dev] [5.3.6] Ignoring TCP_KEEPIDLE. It seems your JDK does not support jdk.net.ExtendedSocketOptions on this OS. Try upgrading to the latest JDK or check with your JDK vendor.Alternatively, on Linux, configure tcp_keepalive_time in the kernel (affecting default keep-alive configuration for all sockets): For more info see https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/. If this isn't dealt with, idle connections could be closed prematurely.
+2023-12-28 11:24:31 WARN  AddressPicker:67 - [LOCAL] [dev] [5.3.6] Ignoring TCP_KEEPINTERVAL. It seems your JDK does not support jdk.net.ExtendedSocketOptions on this OS. Try upgrading to the latest JDK or check with your JDK vendor.Alternatively, on Linux, configure tcp_keepalive_intvl in the kernel (affecting default keep-alive configuration for all sockets): For more info see https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/. If this isn't dealt with, idle connections could be closed prematurely.
+2023-12-28 11:24:32 INFO  logo:65 - [192.168.56.1]:5701 [dev] [5.3.6] 
 	+       +  o    o     o     o---o o----o o      o---o     o     o----o o--o--o
 	+ +   + +  |    |    / \       /  |      |     /         / \    |         |   
 	+ + + + +  o----o   o   o     o   o----o |    o         o   o   o----o    |   
 	+ +   + +  |    |  /     \   /    |      |     \       /     \       |    |   
 	+       +  o    o o       o o---o o----o o----o o---o o       o o----o    o   
-2023-12-23 20:24:39 INFO  system:65 - [192.168.56.1]:5701 [dev] [5.3.6] Copyright (c) 2008-2023, Hazelcast, Inc. All Rights Reserved.
-2023-12-23 20:24:39 INFO  system:65 - [192.168.56.1]:5701 [dev] [5.3.6] Hazelcast Platform 5.3.6 (20231109 - 9903dc9) starting at [192.168.56.1]:5701
-2023-12-23 20:24:39 INFO  system:65 - [192.168.56.1]:5701 [dev] [5.3.6] Cluster name: dev
-2023-12-23 20:24:39 INFO  system:65 - [192.168.56.1]:5701 [dev] [5.3.6] Integrity Checker is disabled. Fail-fast on corrupted executables will not be performed. For more information, see the documentation for Integrity Checker.
-2023-12-23 20:24:39 INFO  system:65 - [192.168.56.1]:5701 [dev] [5.3.6] Jet is enabled
-2023-12-23 20:24:39 INFO  TpcServerBootstrap:65 - [192.168.56.1]:5701 [dev] [5.3.6] TPC: disabled
-2023-12-23 20:24:39 INFO  security:65 - [192.168.56.1]:5701 [dev] [5.3.6] Enable DEBUG/FINE log level for log category com.hazelcast.system.security  or use -Dhazelcast.security.recommendations system property to see security recommendations and the status of current config.
-2023-12-23 20:24:40 ERROR Node:69 - [192.168.56.1]:5701 [dev] [5.3.6] Address already in use: bind
+2023-12-28 11:24:32 INFO  system:65 - [192.168.56.1]:5701 [dev] [5.3.6] Copyright (c) 2008-2023, Hazelcast, Inc. All Rights Reserved.
+2023-12-28 11:24:32 INFO  system:65 - [192.168.56.1]:5701 [dev] [5.3.6] Hazelcast Platform 5.3.6 (20231109 - 9903dc9) starting at [192.168.56.1]:5701
+2023-12-28 11:24:32 INFO  system:65 - [192.168.56.1]:5701 [dev] [5.3.6] Cluster name: dev
+2023-12-28 11:24:32 INFO  system:65 - [192.168.56.1]:5701 [dev] [5.3.6] Integrity Checker is disabled. Fail-fast on corrupted executables will not be performed. For more information, see the documentation for Integrity Checker.
+2023-12-28 11:24:32 INFO  system:65 - [192.168.56.1]:5701 [dev] [5.3.6] Jet is enabled
+2023-12-28 11:24:32 INFO  TpcServerBootstrap:65 - [192.168.56.1]:5701 [dev] [5.3.6] TPC: disabled
+2023-12-28 11:24:33 INFO  security:65 - [192.168.56.1]:5701 [dev] [5.3.6] Enable DEBUG/FINE log level for log category com.hazelcast.system.security  or use -Dhazelcast.security.recommendations system property to see security recommendations and the status of current config.
+2023-12-28 11:24:33 ERROR Node:69 - [192.168.56.1]:5701 [dev] [5.3.6] Address already in use: bind
 java.net.BindException: Address already in use: bind
 	at java.base/sun.nio.ch.Net.bind0(Native Method)
 	at java.base/sun.nio.ch.Net.bind(Net.java:565)
@@ -33,7 +33,7 @@ java.net.BindException: Address already in use: bind
 	at com.hazelcast.instance.impl.HazelcastInstanceFactory.newHazelcastInstance(HazelcastInstanceFactory.java:196)
 	at com.hazelcast.instance.impl.HazelcastInstanceFactory.newHazelcastInstance(HazelcastInstanceFactory.java:134)
 	at com.hazelcast.core.Hazelcast.newHazelcastInstance(Hazelcast.java:61)
-	at MainKt$main$1.invokeSuspend(Main.kt:22)
+	at CombinedMainKt$main$1.invokeSuspend(CombinedMain.kt:21)
 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
 	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:280)
@@ -42,158 +42,145 @@ java.net.BindException: Address already in use: bind
 	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
 	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)
 	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
-	at MainKt.main(Main.kt:16)
-	at MainKt.main(Main.kt)
-2023-12-23 20:24:40 INFO  Node:65 - [192.168.56.1]:5701 [dev] [5.3.6] Using Discovery SPI
-2023-12-23 20:24:40 WARN  CPSubsystem:67 - [192.168.56.1]:5701 [dev] [5.3.6] CP Subsystem is not enabled. CP data structures will operate in UNSAFE mode! Please note that UNSAFE mode will not provide strong consistency guarantees.
-2023-12-23 20:24:40 INFO  JetServiceBackend:65 - [192.168.56.1]:5701 [dev] [5.3.6] Setting number of cooperative threads and default parallelism to 4
-2023-12-23 20:24:40 INFO  Diagnostics:65 - [192.168.56.1]:5701 [dev] [5.3.6] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
-2023-12-23 20:24:40 INFO  LifecycleService:65 - [192.168.56.1]:5701 [dev] [5.3.6] [192.168.56.1]:5701 is STARTING
-2023-12-23 20:24:46 INFO  ClusterService:65 - [192.168.56.1]:5701 [dev] [5.3.6] 
+	at CombinedMainKt.main(CombinedMain.kt:15)
+	at CombinedMainKt.main(CombinedMain.kt)
+2023-12-28 11:24:33 INFO  Node:65 - [192.168.56.1]:5701 [dev] [5.3.6] Using Discovery SPI
+2023-12-28 11:24:33 WARN  CPSubsystem:67 - [192.168.56.1]:5701 [dev] [5.3.6] CP Subsystem is not enabled. CP data structures will operate in UNSAFE mode! Please note that UNSAFE mode will not provide strong consistency guarantees.
+2023-12-28 11:24:33 INFO  JetServiceBackend:65 - [192.168.56.1]:5701 [dev] [5.3.6] Setting number of cooperative threads and default parallelism to 4
+2023-12-28 11:24:33 INFO  Diagnostics:65 - [192.168.56.1]:5701 [dev] [5.3.6] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+2023-12-28 11:24:33 INFO  LifecycleService:65 - [192.168.56.1]:5701 [dev] [5.3.6] [192.168.56.1]:5701 is STARTING
+2023-12-28 11:24:39 INFO  ClusterService:65 - [192.168.56.1]:5701 [dev] [5.3.6] 
 
 Members {size:1, ver:1} [
-	Member [192.168.56.1]:5701 - 693cf1af-b93b-4a8f-9d72-407dcc722fd5 this
+	Member [192.168.56.1]:5701 - 60ab7ea0-f822-48cf-881e-4a9517ec640e this
 ]
 
-2023-12-23 20:24:46 INFO  JobCoordinationService:65 - [192.168.56.1]:5701 [dev] [5.3.6] Jet started scanning for jobs
-2023-12-23 20:24:46 INFO  LifecycleService:65 - [192.168.56.1]:5701 [dev] [5.3.6] [192.168.56.1]:5701 is STARTED
-2023-12-23 20:24:46 INFO  PartitionStateManager:65 - [192.168.56.1]:5701 [dev] [5.3.6] Initializing cluster partition table arrangement...
-2023-12-23 20:24:48 INFO  JobCoordinationService:65 - [192.168.56.1]:5701 [dev] [5.3.6] Starting job 0afa-47a2-8680-0001 based on submit request
-2023-12-23 20:24:48 INFO  MasterJobContext:65 - [192.168.56.1]:5701 [dev] [5.3.6] Didn't find any snapshot to restore for job '0afa-47a2-8680-0001', execution 0afa-47a2-8681-0001
-2023-12-23 20:24:48 INFO  MasterJobContext:65 - [192.168.56.1]:5701 [dev] [5.3.6] Start executing job '0afa-47a2-8680-0001', execution 0afa-47a2-8681-0001, execution graph in DOT format:
+2023-12-28 11:24:39 INFO  JobCoordinationService:65 - [192.168.56.1]:5701 [dev] [5.3.6] Jet started scanning for jobs
+2023-12-28 11:24:39 INFO  LifecycleService:65 - [192.168.56.1]:5701 [dev] [5.3.6] [192.168.56.1]:5701 is STARTED
+2023-12-28 11:24:39 INFO  PartitionStateManager:65 - [192.168.56.1]:5701 [dev] [5.3.6] Initializing cluster partition table arrangement...
+2023-12-28 11:24:40 INFO  JobCoordinationService:65 - [192.168.56.1]:5701 [dev] [5.3.6] Starting job 0b00-3bf6-1800-0001 based on submit request
+2023-12-28 11:24:40 INFO  MasterJobContext:65 - [192.168.56.1]:5701 [dev] [5.3.6] Didn't find any snapshot to restore for job '0b00-3bf6-1800-0001', execution 0b00-3bf6-1801-0001
+2023-12-28 11:24:40 INFO  MasterJobContext:65 - [192.168.56.1]:5701 [dev] [5.3.6] Start executing job '0b00-3bf6-1800-0001', execution 0b00-3bf6-1801-0001, execution graph in DOT format:
 digraph DAG {
 	"fileWatcherSource(home/data//*)" [localParallelism=2];
 	"fileWatcherSource(home/data//*)-add-timestamps" [localParallelism=2];
-	"fused(map, filter)" [localParallelism=4];
+	"fused(map-2, filter, map-3)" [localParallelism=4];
+	"mapWithMergingSink(requestsCountMap)" [localParallelism=4];
+	"fused(map, filter-2)" [localParallelism=4];
 	"sliding-window-prepare" [localParallelism=4];
 	"sliding-window" [localParallelism=1];
 	"loggerSink" [localParallelism=1];
 	"fileWatcherSource(home/data//*)" -> "fileWatcherSource(home/data//*)-add-timestamps" [label="isolated", queueSize=1024];
-	"fileWatcherSource(home/data//*)-add-timestamps" -> "fused(map, filter)" [queueSize=1024];
-	"fused(map, filter)" -> "sliding-window-prepare" [queueSize=1024];
+	"fileWatcherSource(home/data//*)-add-timestamps" -> "fused(map, filter-2)" [taillabel=0, queueSize=1024];
+	"fileWatcherSource(home/data//*)-add-timestamps" -> "fused(map-2, filter, map-3)" [taillabel=1, queueSize=1024];
+	"fused(map-2, filter, map-3)" -> "mapWithMergingSink(requestsCountMap)" [label="partitioned", queueSize=1024];
+	"fused(map, filter-2)" -> "sliding-window-prepare" [queueSize=1024];
 	subgraph cluster_0 {
 		"sliding-window-prepare" -> "sliding-window" [label="distributed-partitioned", queueSize=1024];
 	}
 	"sliding-window" -> "loggerSink" [queueSize=1024];
 }
 HINT: You can use graphviz or http://viz-js.com to visualize the printed graph.
-2023-12-23 20:24:48 INFO  JobCoordinationService:65 - [192.168.56.1]:5701 [dev] [5.3.6] Starting job 0afa-47a2-8682-0001 based on submit request
-2023-12-23 20:24:48 INFO  MasterJobContext:65 - [192.168.56.1]:5701 [dev] [5.3.6] Didn't find any snapshot to restore for job '0afa-47a2-8682-0001', execution 0afa-47a2-8683-0001
-2023-12-23 20:24:48 INFO  MasterJobContext:65 - [192.168.56.1]:5701 [dev] [5.3.6] Start executing job '0afa-47a2-8682-0001', execution 0afa-47a2-8683-0001, execution graph in DOT format:
-digraph DAG {
-	"fileWatcherSource(home/data//*)" [localParallelism=2];
-	"fused(map, filter, map-2)" [localParallelism=4];
-	"mapWithMergingSink(requestsCountMap)" [localParallelism=4];
-	"fileWatcherSource(home/data//*)" -> "fused(map, filter, map-2)" [queueSize=1024];
-	"fused(map, filter, map-2)" -> "mapWithMergingSink(requestsCountMap)" [label="partitioned", queueSize=1024];
-}
-HINT: You can use graphviz or http://viz-js.com to visualize the printed graph.
-2023-12-23 20:24:48 INFO  JobExecutionService:65 - [192.168.56.1]:5701 [dev] [5.3.6] Execution plan for jobId=0afa-47a2-8682-0001, jobName='0afa-47a2-8682-0001', executionId=0afa-47a2-8683-0001 initialized
-2023-12-23 20:24:48 INFO  JobExecutionService:65 - [192.168.56.1]:5701 [dev] [5.3.6] Execution plan for jobId=0afa-47a2-8680-0001, jobName='0afa-47a2-8680-0001', executionId=0afa-47a2-8681-0001 initialized
-2023-12-23 20:24:48 INFO  JobExecutionService:65 - [192.168.56.1]:5701 [dev] [5.3.6] Start execution of job '0afa-47a2-8682-0001', execution 0afa-47a2-8683-0001 from coordinator [192.168.56.1]:5701
-2023-12-23 20:24:48 INFO  JobExecutionService:65 - [192.168.56.1]:5701 [dev] [5.3.6] Start execution of job '0afa-47a2-8680-0001', execution 0afa-47a2-8681-0001 from coordinator [192.168.56.1]:5701
-2023-12-23 20:24:48 INFO  StreamFilesP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0afa-47a2-8680-0001/fileWatcherSource(home/data//*)#0] Started to watch directory: home\data
-2023-12-23 20:24:48 INFO  StreamFilesP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0afa-47a2-8682-0001/fileWatcherSource(home/data//*)#0] Started to watch directory: home\data
-2023-12-23 20:24:48 INFO  StreamFilesP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0afa-47a2-8682-0001/fileWatcherSource(home/data//*)#1] Started to watch directory: home\data
-2023-12-23 20:24:48 INFO  StreamFilesP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0afa-47a2-8680-0001/fileWatcherSource(home/data//*)#1] Started to watch directory: home\data
-2023-12-23 20:24:51 INFO  PipelineLogger:41 - Procesing URL: /about.html, Status: 200
-2023-12-23 20:24:56 INFO  PipelineLogger:41 - Procesing URL: /api/data, Status: 200
-2023-12-23 20:25:00 INFO  PipelineLogger:41 - Procesing URL: /api/data, Status: 200
-2023-12-23 20:25:00 INFO  PipelineLogger:52 - Updating URL - Old Value: 1, New Value: 2
-2023-12-23 20:25:02 INFO  PipelineLogger:41 - Procesing URL: /api/data, Status: 200
-2023-12-23 20:25:02 INFO  PipelineLogger:52 - Updating URL - Old Value: 2, New Value: 3
-2023-12-23 20:25:03 INFO  PipelineLogger:41 - Procesing URL: /about.html, Status: 200
-2023-12-23 20:25:03 INFO  PipelineLogger:52 - Updating URL - Old Value: 1, New Value: 2
-2023-12-23 20:25:13 INFO  PipelineLogger:41 - Procesing URL: /api/data, Status: 200
-2023-12-23 20:25:13 INFO  PipelineLogger:52 - Updating URL - Old Value: 3, New Value: 4
-2023-12-23 20:25:20 INFO  PipelineLogger:41 - Procesing URL: /about.html, Status: 200
-2023-12-23 20:25:20 INFO  PipelineLogger:52 - Updating URL - Old Value: 2, New Value: 3
-2023-12-23 20:25:21 INFO  PipelineLogger:41 - Procesing URL: /index.html, Status: 200
-2023-12-23 20:25:26 INFO  PipelineLogger:41 - Procesing URL: /products.html, Status: 200
-2023-12-23 20:25:28 INFO  PipelineLogger:41 - Procesing URL: /about.html, Status: 200
-2023-12-23 20:25:28 INFO  PipelineLogger:52 - Updating URL - Old Value: 3, New Value: 4
-2023-12-23 20:25:33 INFO  PipelineLogger:41 - Procesing URL: /contact.html, Status: 200
-2023-12-23 20:25:34 INFO  PipelineLogger:41 - Procesing URL: /about.html, Status: 200
-2023-12-23 20:25:34 INFO  PipelineLogger:52 - Updating URL - Old Value: 4, New Value: 5
-2023-12-23 20:25:44 INFO  PipelineLogger:41 - Procesing URL: /about.html, Status: 200
-2023-12-23 20:25:44 INFO  PipelineLogger:52 - Updating URL - Old Value: 5, New Value: 6
-2023-12-23 20:25:48 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0afa-47a2-8680-0001/loggerSink#0] WindowResult{start=20:24:30.000, end=20:25:00.000, value='2', isEarly=false}
-2023-12-23 20:25:48 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0afa-47a2-8680-0001/loggerSink#0] WindowResult{start=20:24:40.000, end=20:25:10.000, value='5', isEarly=false}
-2023-12-23 20:25:48 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0afa-47a2-8680-0001/loggerSink#0] WindowResult{start=20:24:50.000, end=20:25:20.000, value='6', isEarly=false}
-2023-12-23 20:25:48 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0afa-47a2-8680-0001/loggerSink#0] WindowResult{start=20:25:00.000, end=20:25:30.000, value='8', isEarly=false}
-2023-12-23 20:25:48 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0afa-47a2-8680-0001/loggerSink#0] WindowResult{start=20:25:10.000, end=20:25:40.000, value='7', isEarly=false}
-2023-12-23 20:25:50 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0afa-47a2-8680-0001/loggerSink#0] WindowResult{start=20:25:20.000, end=20:25:50.000, value='7', isEarly=false}
-2023-12-23 20:25:53 INFO  PipelineLogger:41 - Procesing URL: /index.html, Status: 200
-2023-12-23 20:25:53 INFO  PipelineLogger:52 - Updating URL - Old Value: 1, New Value: 2
-2023-12-23 20:25:54 INFO  PipelineLogger:41 - Procesing URL: /index.html, Status: 200
-2023-12-23 20:25:54 INFO  PipelineLogger:52 - Updating URL - Old Value: 2, New Value: 3
-2023-12-23 20:25:55 INFO  PipelineLogger:41 - Procesing URL: /about.html, Status: 200
-2023-12-23 20:25:55 INFO  PipelineLogger:52 - Updating URL - Old Value: 6, New Value: 7
-2023-12-23 20:25:57 INFO  PipelineLogger:41 - Procesing URL: /index.html, Status: 200
-2023-12-23 20:25:57 INFO  PipelineLogger:52 - Updating URL - Old Value: 3, New Value: 4
-2023-12-23 20:25:58 INFO  PipelineLogger:41 - Procesing URL: /index.html, Status: 200
-2023-12-23 20:25:58 INFO  PipelineLogger:52 - Updating URL - Old Value: 4, New Value: 5
-2023-12-23 20:25:59 INFO  PipelineLogger:41 - Procesing URL: /contact.html, Status: 200
-2023-12-23 20:25:59 INFO  PipelineLogger:52 - Updating URL - Old Value: 1, New Value: 2
-2023-12-23 20:26:00 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0afa-47a2-8680-0001/loggerSink#0] WindowResult{start=20:25:30.000, end=20:26:00.000, value='9', isEarly=false}
-2023-12-23 20:26:06 INFO  PipelineLogger:41 - Procesing URL: /products.html, Status: 200
-2023-12-23 20:26:06 INFO  PipelineLogger:52 - Updating URL - Old Value: 1, New Value: 2
-2023-12-23 20:26:10 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0afa-47a2-8680-0001/loggerSink#0] WindowResult{start=20:25:40.000, end=20:26:10.000, value='8', isEarly=false}
-2023-12-23 20:26:12 INFO  PipelineLogger:41 - Procesing URL: /about.html, Status: 200
-2023-12-23 20:26:12 INFO  PipelineLogger:52 - Updating URL - Old Value: 7, New Value: 8
-2023-12-23 20:26:16 INFO  PipelineLogger:41 - Procesing URL: /index.html, Status: 200
-2023-12-23 20:26:16 INFO  PipelineLogger:52 - Updating URL - Old Value: 5, New Value: 6
-2023-12-23 20:26:17 INFO  PipelineLogger:41 - Procesing URL: /api/data, Status: 200
-2023-12-23 20:26:17 INFO  PipelineLogger:52 - Updating URL - Old Value: 4, New Value: 5
-2023-12-23 20:26:20 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0afa-47a2-8680-0001/loggerSink#0] WindowResult{start=20:25:50.000, end=20:26:20.000, value='10', isEarly=false}
-2023-12-23 20:26:25 INFO  PipelineLogger:41 - Procesing URL: /index.html, Status: 200
-2023-12-23 20:26:25 INFO  PipelineLogger:52 - Updating URL - Old Value: 6, New Value: 7
-2023-12-23 20:26:30 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0afa-47a2-8680-0001/loggerSink#0] WindowResult{start=20:26:00.000, end=20:26:30.000, value='5', isEarly=false}
-2023-12-23 20:26:34 INFO  PipelineLogger:41 - Procesing URL: /products.html, Status: 200
-2023-12-23 20:26:34 INFO  PipelineLogger:52 - Updating URL - Old Value: 2, New Value: 3
-2023-12-23 20:26:37 INFO  PipelineLogger:41 - Procesing URL: /about.html, Status: 200
-2023-12-23 20:26:37 INFO  PipelineLogger:52 - Updating URL - Old Value: 8, New Value: 9
-2023-12-23 20:26:37 INFO  Node:65 - [192.168.56.1]:5701 [dev] [5.3.6] Running shutdown hook... Current node state: ACTIVE
-2023-12-23 20:26:37 INFO  LifecycleService:65 - [192.168.56.1]:5701 [dev] [5.3.6] [192.168.56.1]:5701 is SHUTTING_DOWN
-2023-12-23 20:26:37 WARN  Node:67 - [192.168.56.1]:5701 [dev] [5.3.6] Terminating forcefully...
-2023-12-23 20:26:37 INFO  Node:65 - [192.168.56.1]:5701 [dev] [5.3.6] Shutting down connection manager...
-2023-12-23 20:26:37 INFO  Node:65 - [192.168.56.1]:5701 [dev] [5.3.6] Shutting down node engine...
-2023-12-23 20:26:37 ERROR MasterJobContext:69 - [192.168.56.1]:5701 [dev] [5.3.6] job '0afa-47a2-8680-0001', execution 0afa-47a2-8681-0001: some TerminateExecutionOperation invocations failed, execution might remain stuck: [MemberInfo{address=[192.168.56.1]:5701, uuid=693cf1af-b93b-4a8f-9d72-407dcc722fd5, cpMemberUUID=null, liteMember=false, memberListJoinVersion=1}=com.hazelcast.core.HazelcastInstanceNotActiveException: Hazelcast instance is not active!]
-2023-12-23 20:26:37 ERROR MasterJobContext:69 - [192.168.56.1]:5701 [dev] [5.3.6] job '0afa-47a2-8682-0001', execution 0afa-47a2-8683-0001: some TerminateExecutionOperation invocations failed, execution might remain stuck: [MemberInfo{address=[192.168.56.1]:5701, uuid=693cf1af-b93b-4a8f-9d72-407dcc722fd5, cpMemberUUID=null, liteMember=false, memberListJoinVersion=1}=com.hazelcast.core.HazelcastInstanceNotActiveException: Hazelcast instance is not active!]
-2023-12-23 20:26:37 WARN  StartExecutionOperation:67 - [192.168.56.1]:5701 [dev] [5.3.6] null
-com.hazelcast.jet.impl.execution.ExecutionCancellationException
-	at com.hazelcast.jet.impl.execution.ExecutionContext.terminateExecution(ExecutionContext.java:316)
-	at com.hazelcast.jet.impl.JobExecutionService.terminateExecution0(JobExecutionService.java:723)
-	at com.hazelcast.jet.impl.JobExecutionService.cancelAllExecutions(JobExecutionService.java:252)
-	at com.hazelcast.jet.impl.JobExecutionService.shutdown(JobExecutionService.java:231)
-	at com.hazelcast.jet.impl.JetServiceBackend.shutdown(JetServiceBackend.java:244)
-	at com.hazelcast.spi.impl.servicemanager.impl.ServiceManagerImpl.shutdownService(ServiceManagerImpl.java:308)
-	at com.hazelcast.spi.impl.servicemanager.impl.ServiceManagerImpl.shutdown(ServiceManagerImpl.java:299)
-	at com.hazelcast.spi.impl.NodeEngineImpl.shutdown(NodeEngineImpl.java:593)
-	at com.hazelcast.instance.impl.Node.shutdownServices(Node.java:630)
-	at com.hazelcast.instance.impl.Node.shutdown(Node.java:566)
-	at com.hazelcast.instance.impl.LifecycleServiceImpl.shutdown(LifecycleServiceImpl.java:101)
-	at com.hazelcast.instance.impl.LifecycleServiceImpl.terminate(LifecycleServiceImpl.java:89)
-	at com.hazelcast.instance.impl.Node$NodeShutdownHookThread.run(Node.java:809)
-Caused by: java.util.concurrent.CancellationException
-	... 11 more
-2023-12-23 20:26:37 WARN  StartExecutionOperation:67 - [192.168.56.1]:5701 [dev] [5.3.6] null
-com.hazelcast.jet.impl.execution.ExecutionCancellationException
-	at com.hazelcast.jet.impl.execution.ExecutionContext.terminateExecution(ExecutionContext.java:316)
-	at com.hazelcast.jet.impl.JobExecutionService.terminateExecution0(JobExecutionService.java:723)
-	at com.hazelcast.jet.impl.JobExecutionService.cancelAllExecutions(JobExecutionService.java:252)
-	at com.hazelcast.jet.impl.JobExecutionService.shutdown(JobExecutionService.java:231)
-	at com.hazelcast.jet.impl.JetServiceBackend.shutdown(JetServiceBackend.java:244)
-	at com.hazelcast.spi.impl.servicemanager.impl.ServiceManagerImpl.shutdownService(ServiceManagerImpl.java:308)
-	at com.hazelcast.spi.impl.servicemanager.impl.ServiceManagerImpl.shutdown(ServiceManagerImpl.java:299)
-	at com.hazelcast.spi.impl.NodeEngineImpl.shutdown(NodeEngineImpl.java:593)
-	at com.hazelcast.instance.impl.Node.shutdownServices(Node.java:630)
-	at com.hazelcast.instance.impl.Node.shutdown(Node.java:566)
-	at com.hazelcast.instance.impl.LifecycleServiceImpl.shutdown(LifecycleServiceImpl.java:101)
-	at com.hazelcast.instance.impl.LifecycleServiceImpl.terminate(LifecycleServiceImpl.java:89)
-	at com.hazelcast.instance.impl.Node$NodeShutdownHookThread.run(Node.java:809)
-Caused by: java.util.concurrent.CancellationException
-	... 11 more
-2023-12-23 20:26:37 INFO  NodeExtension:65 - [192.168.56.1]:5701 [dev] [5.3.6] Destroying node NodeExtension.
-2023-12-23 20:26:37 INFO  Node:65 - [192.168.56.1]:5701 [dev] [5.3.6] Hazelcast Shutdown is completed in 45 ms.
-2023-12-23 20:26:37 INFO  LifecycleService:65 - [192.168.56.1]:5701 [dev] [5.3.6] [192.168.56.1]:5701 is SHUTDOWN
+2023-12-28 11:24:40 INFO  JobExecutionService:65 - [192.168.56.1]:5701 [dev] [5.3.6] Execution plan for jobId=0b00-3bf6-1800-0001, jobName='0b00-3bf6-1800-0001', executionId=0b00-3bf6-1801-0001 initialized
+2023-12-28 11:24:40 INFO  JobExecutionService:65 - [192.168.56.1]:5701 [dev] [5.3.6] Start execution of job '0b00-3bf6-1800-0001', execution 0b00-3bf6-1801-0001 from coordinator [192.168.56.1]:5701
+2023-12-28 11:24:40 INFO  StreamFilesP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0b00-3bf6-1800-0001/fileWatcherSource(home/data//*)#1] Started to watch directory: home\data
+2023-12-28 11:24:40 INFO  StreamFilesP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0b00-3bf6-1800-0001/fileWatcherSource(home/data//*)#0] Started to watch directory: home\data
+2023-12-28 11:24:44 INFO  PipelineLogger:60 - Procesing URL: /about.html, Status: 200
+2023-12-28 11:24:46 INFO  PipelineLogger:60 - Procesing URL: /index.html, Status: 200
+2023-12-28 11:24:47 INFO  PipelineLogger:60 - Procesing URL: /about.html, Status: 200
+2023-12-28 11:24:47 INFO  PipelineLogger:71 - Updating URL - Old Value: 1, New Value: 2
+2023-12-28 11:24:54 INFO  PipelineLogger:60 - Procesing URL: /products.html, Status: 200
+2023-12-28 11:24:57 INFO  PipelineLogger:60 - Procesing URL: /contact.html, Status: 200
+2023-12-28 11:25:02 INFO  PipelineLogger:60 - Procesing URL: /api/data, Status: 200
+2023-12-28 11:25:14 INFO  PipelineLogger:60 - Procesing URL: /index.html, Status: 200
+2023-12-28 11:25:14 INFO  PipelineLogger:71 - Updating URL - Old Value: 1, New Value: 2
+2023-12-28 11:25:16 INFO  PipelineLogger:60 - Procesing URL: /api/data, Status: 200
+2023-12-28 11:25:16 INFO  PipelineLogger:71 - Updating URL - Old Value: 1, New Value: 2
+2023-12-28 11:25:20 INFO  PipelineLogger:60 - Procesing URL: /about.html, Status: 200
+2023-12-28 11:25:20 INFO  PipelineLogger:71 - Updating URL - Old Value: 2, New Value: 3
+2023-12-28 11:25:21 INFO  PipelineLogger:60 - Procesing URL: /about.html, Status: 200
+2023-12-28 11:25:21 INFO  PipelineLogger:71 - Updating URL - Old Value: 3, New Value: 4
+2023-12-28 11:25:37 INFO  PipelineLogger:60 - Procesing URL: /api/data, Status: 200
+2023-12-28 11:25:37 INFO  PipelineLogger:71 - Updating URL - Old Value: 2, New Value: 3
+2023-12-28 11:25:40 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0b00-3bf6-1800-0001/loggerSink#0] WindowResult{start=11:24:20.000, end=11:24:50.000, value='3', isEarly=false}
+2023-12-28 11:25:40 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0b00-3bf6-1800-0001/loggerSink#0] WindowResult{start=11:24:30.000, end=11:25:00.000, value='5', isEarly=false}
+2023-12-28 11:25:40 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0b00-3bf6-1800-0001/loggerSink#0] WindowResult{start=11:24:40.000, end=11:25:10.000, value='6', isEarly=false}
+2023-12-28 11:25:40 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0b00-3bf6-1800-0001/loggerSink#0] WindowResult{start=11:24:50.000, end=11:25:20.000, value='5', isEarly=false}
+2023-12-28 11:25:40 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0b00-3bf6-1800-0001/loggerSink#0] WindowResult{start=11:25:00.000, end=11:25:30.000, value='5', isEarly=false}
+2023-12-28 11:25:40 INFO  PipelineLogger:60 - Procesing URL: /index.html, Status: 200
+2023-12-28 11:25:40 INFO  PipelineLogger:71 - Updating URL - Old Value: 2, New Value: 3
+2023-12-28 11:25:40 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0b00-3bf6-1800-0001/loggerSink#0] WindowResult{start=11:25:10.000, end=11:25:40.000, value='5', isEarly=false}
+2023-12-28 11:25:45 INFO  PipelineLogger:60 - Procesing URL: /products.html, Status: 200
+2023-12-28 11:25:45 INFO  PipelineLogger:71 - Updating URL - Old Value: 1, New Value: 2
+2023-12-28 11:25:50 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0b00-3bf6-1800-0001/loggerSink#0] WindowResult{start=11:25:20.000, end=11:25:50.000, value='5', isEarly=false}
+2023-12-28 11:26:00 INFO  PipelineLogger:60 - Procesing URL: /about.html, Status: 200
+2023-12-28 11:26:00 INFO  PipelineLogger:71 - Updating URL - Old Value: 4, New Value: 5
+2023-12-28 11:26:00 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0b00-3bf6-1800-0001/loggerSink#0] WindowResult{start=11:25:30.000, end=11:26:00.000, value='3', isEarly=false}
+2023-12-28 11:26:10 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0b00-3bf6-1800-0001/loggerSink#0] WindowResult{start=11:25:40.000, end=11:26:10.000, value='3', isEarly=false}
+2023-12-28 11:26:13 INFO  PipelineLogger:60 - Procesing URL: /products.html, Status: 200
+2023-12-28 11:26:13 INFO  PipelineLogger:71 - Updating URL - Old Value: 2, New Value: 3
+2023-12-28 11:26:18 INFO  PipelineLogger:60 - Procesing URL: /products.html, Status: 200
+2023-12-28 11:26:18 INFO  PipelineLogger:71 - Updating URL - Old Value: 3, New Value: 4
+2023-12-28 11:26:20 INFO  PipelineLogger:60 - Procesing URL: /products.html, Status: 200
+2023-12-28 11:26:20 INFO  PipelineLogger:71 - Updating URL - Old Value: 4, New Value: 5
+2023-12-28 11:26:20 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0b00-3bf6-1800-0001/loggerSink#0] WindowResult{start=11:25:50.000, end=11:26:20.000, value='3', isEarly=false}
+2023-12-28 11:26:21 INFO  PipelineLogger:60 - Procesing URL: /api/data, Status: 200
+2023-12-28 11:26:21 INFO  PipelineLogger:71 - Updating URL - Old Value: 3, New Value: 4
+2023-12-28 11:26:28 INFO  PipelineLogger:60 - Procesing URL: /contact.html, Status: 200
+2023-12-28 11:26:28 INFO  PipelineLogger:71 - Updating URL - Old Value: 1, New Value: 2
+2023-12-28 11:26:30 INFO  WriteLoggerP:65 - [192.168.56.1]:5701 [dev] [5.3.6] [0b00-3bf6-1800-0001/loggerSink#0] WindowResult{start=11:26:00.000, end=11:26:30.000, value='6', isEarly=false}
+2023-12-28 11:26:32 INFO  PipelineLogger:60 - Procesing URL: /products.html, Status: 200
+2023-12-28 11:26:32 INFO  PipelineLogger:71 - Updating URL - Old Value: 5, New Value: 6
+2023-12-28 11:26:35 INFO  Node:65 - [192.168.56.1]:5701 [dev] [5.3.6] Running shutdown hook... Current node state: ACTIVE
+2023-12-28 11:26:35 INFO  LifecycleService:65 - [192.168.56.1]:5701 [dev] [5.3.6] [192.168.56.1]:5701 is SHUTTING_DOWN
+2023-12-28 11:26:35 WARN  Node:67 - [192.168.56.1]:5701 [dev] [5.3.6] Terminating forcefully...
+2023-12-28 11:26:35 INFO  Node:65 - [192.168.56.1]:5701 [dev] [5.3.6] Shutting down connection manager...
+2023-12-28 11:26:35 INFO  Node:65 - [192.168.56.1]:5701 [dev] [5.3.6] Shutting down node engine...
+2023-12-28 11:26:35 ERROR MasterJobContext:69 - [192.168.56.1]:5701 [dev] [5.3.6] job '0b00-3bf6-1800-0001', execution 0b00-3bf6-1801-0001: some TerminateExecutionOperation invocations failed, execution might remain stuck: [MemberInfo{address=[192.168.56.1]:5701, uuid=60ab7ea0-f822-48cf-881e-4a9517ec640e, cpMemberUUID=null, liteMember=false, memberListJoinVersion=1}=com.hazelcast.core.HazelcastInstanceNotActiveException: Hazelcast instance is not active!]
+2023-12-28 11:26:35 WARN  JobCoordinationService:67 - [192.168.56.1]:5701 [dev] [5.3.6] null
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@314b02e8[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@6fc74ec2[Wrapped task = DelegateDecorator{executor=com.hazelcast.internal.util.executor.CachedExecutorServiceDelegate@52b8f69f, runnable=com.hazelcast.jet.impl.JobCoordinationService$$Lambda/0x000001e6014e7170@36638472}]] rejected from com.hazelcast.internal.util.executor.LoggingScheduledExecutor@69f1a286[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3771]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:340)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:562)
+	at com.hazelcast.spi.impl.executionservice.impl.DelegatingTaskScheduler.schedule(DelegatingTaskScheduler.java:49)
+	at com.hazelcast.spi.impl.executionservice.impl.ExecutionServiceImpl.schedule(ExecutionServiceImpl.java:278)
+	at com.hazelcast.jet.impl.JobCoordinationService.scheduleRestart(JobCoordinationService.java:1129)
+	at com.hazelcast.jet.impl.MasterJobContext.scheduleRestart(MasterJobContext.java:542)
+	at com.hazelcast.jet.impl.MasterJobContext.lambda$null$33(MasterJobContext.java:772)
+	at com.hazelcast.jet.impl.JobCoordinationService.lambda$submitToCoordinatorThread$60(JobCoordinationService.java:1452)
+	at com.hazelcast.jet.impl.JobCoordinationService.lambda$submitToCoordinatorThread$61(JobCoordinationService.java:1473)
+	at com.hazelcast.internal.util.executor.CompletableFutureTask.run(CompletableFutureTask.java:64)
+	at com.hazelcast.internal.util.executor.CachedExecutorServiceDelegate$Worker.run(CachedExecutorServiceDelegate.java:217)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76)
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:111)
+2023-12-28 11:26:35 WARN  Invocation:67 - [192.168.56.1]:5701 [dev] [5.3.6] Future.complete(Object) on completed future. Request: Invocation{op=com.hazelcast.jet.impl.operation.StartExecutionOperation{serviceName='hz:impl:jetService', identityHash=2121535641, partitionId=-1, replicaIndex=0, callId=-10, invocationTime=1703759080214 (2023-12-28 11:24:40.214), waitTimeout=-1, callTimeout=60000, tenantControl=com.hazelcast.spi.impl.tenantcontrol.NoopTenantControl@0}, tryCount=250, tryPauseMillis=500, invokeCount=1, callTimeoutMillis=60000, firstInvocationTimeMs=1703759080214, firstInvocationTime='2023-12-28 11:24:40.214', lastHeartbeatMillis=1703759193921, lastHeartbeatTime='2023-12-28 11:26:33.921', targetAddress=[192.168.56.1]:5701, targetMember=Member [192.168.56.1]:5701 - 60ab7ea0-f822-48cf-881e-4a9517ec640e this, memberListVersion=1, pendingResponse={VOID}, backupsAcksExpected=-1, backupsAcksReceived=0, connection=null}, current value: ExceptionalResult{cause=com.hazelcast.core.HazelcastInstanceNotActiveException: Hazelcast instance is not active!}, offered value: ExceptionalResult{cause=java.util.concurrent.RejectedExecutionException: Executor[hz:jet-job-offloadable] was shut down.}
+java.lang.Exception: Future.complete(Object) on completed future. Request: Invocation{op=com.hazelcast.jet.impl.operation.StartExecutionOperation{serviceName='hz:impl:jetService', identityHash=2121535641, partitionId=-1, replicaIndex=0, callId=-10, invocationTime=1703759080214 (2023-12-28 11:24:40.214), waitTimeout=-1, callTimeout=60000, tenantControl=com.hazelcast.spi.impl.tenantcontrol.NoopTenantControl@0}, tryCount=250, tryPauseMillis=500, invokeCount=1, callTimeoutMillis=60000, firstInvocationTimeMs=1703759080214, firstInvocationTime='2023-12-28 11:24:40.214', lastHeartbeatMillis=1703759193921, lastHeartbeatTime='2023-12-28 11:26:33.921', targetAddress=[192.168.56.1]:5701, targetMember=Member [192.168.56.1]:5701 - 60ab7ea0-f822-48cf-881e-4a9517ec640e this, memberListVersion=1, pendingResponse={VOID}, backupsAcksExpected=-1, backupsAcksReceived=0, connection=null}, current value: ExceptionalResult{cause=com.hazelcast.core.HazelcastInstanceNotActiveException: Hazelcast instance is not active!}, offered value: ExceptionalResult{cause=java.util.concurrent.RejectedExecutionException: Executor[hz:jet-job-offloadable] was shut down.}
+	at com.hazelcast.spi.impl.AbstractInvocationFuture.warnIfSuspiciousDoubleCompletion(AbstractInvocationFuture.java:1262)
+	at com.hazelcast.spi.impl.AbstractInvocationFuture.complete0(AbstractInvocationFuture.java:1236)
+	at com.hazelcast.spi.impl.AbstractInvocationFuture.completeExceptionallyInternal(AbstractInvocationFuture.java:1229)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.completeExceptionally(Invocation.java:697)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.notifyThrowable(Invocation.java:390)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.notifyError(Invocation.java:334)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.sendResponse(Invocation.java:230)
+	at com.hazelcast.spi.impl.operationservice.Operation.sendResponse(Operation.java:487)
+	at com.hazelcast.jet.impl.operation.AsyncOperation.doSendResponse(AsyncOperation.java:92)
+	at com.hazelcast.jet.impl.operation.AsyncOperation.lambda$run$0(AsyncOperation.java:67)
+	at com.hazelcast.jet.impl.util.ExceptionUtil.lambda$withTryCatch$0(ExceptionUtil.java:182)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:914)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+2023-12-28 11:26:35 INFO  NodeExtension:65 - [192.168.56.1]:5701 [dev] [5.3.6] Destroying node NodeExtension.
+2023-12-28 11:26:35 INFO  Node:65 - [192.168.56.1]:5701 [dev] [5.3.6] Hazelcast Shutdown is completed in 57 ms.
+2023-12-28 11:26:35 INFO  LifecycleService:65 - [192.168.56.1]:5701 [dev] [5.3.6] [192.168.56.1]:5701 is SHUTDOWN
